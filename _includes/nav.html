@@ -1,0 +1,80 @@
+<!-- Header -->
+	<div id="header-wrapper">
+		<div id="header">
+
+			<!-- Logo -->
+				<h1><a href="{{ site.baseurl }}/index.html">GeoNode Summit 2016</a></h1>
+
+			<nav id="nav">
+							<ul>
+							    {% assign current = page.url | downcase | split: '/' %}
+								<li {% if current[1] == 'index.html' %}class="current"{% endif %}><a href="{{ site.baseurl }}/index.html">Home</a></li>
+								<li {% if current[1] == 'summary.html' %}class="current"{% endif %}><a href="{{ site.baseurl }}/summary.html" id="about-button">About</a></li>
+								<li {% if current[1] == 'summary.html' %}class="current"{% endif %}>
+									<a href="{{ site.baseurl }}/schedule.html">Schedule</a>
+									<ul>
+										<li><a href="{{ site.baseurl }}/schedule.html#monday">Monday, November 28</a></li>
+										<li><a href="{{ site.baseurl }}/schedule.html#tuesday">Tuesday, November 29</a></li>
+										<li><a href="{{ site.baseurl }}/schedule.html#wednesday">Wednesday, November 30</a></li>
+										<li><a href="{{ site.baseurl }}/schedule.html#thursday">Thursday, December 1</a></li>
+										<li><a href="{{ site.baseurl }}/schedule.html#friday">Friday, December 2</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="{{ site.baseurl }}/workshops">Workshops</a>
+									<ul>
+										{% for workshop in site.categories.workshops %}
+										<li><a href="{{ site.baseurl }}{{ workshop.url }}">{{ workshop.title }}</a></li>
+										{% endfor %}
+									</ul>
+								</li>
+								<li {% if current[1] == 'bios.html' %}class="current"{% endif %}><a href="{{ site.baseurl }}/speakers" >Speakers</a></li>
+								<li><a href="{{ site.baseurl }}/afterhours" target="_blank">After Hours</a></li>
+								<li>
+									<a href="http://twitter.com/intent/tweet?hashtags=geonode,opensource,gis">
+										<img src="{{ site.baseurl }}/assets/img/TwitterLogo.png" width="32" style="top:15px;position:relative">
+									</a>
+								  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+								</li>
+							</ul>
+						</nav>
+
+
+			<!-- original Nav
+				<nav id="nav">
+					<ul>
+						<li><a href="{{ site.baseurl }}/index.html">Home</a></li>
+						<li>
+							<a href="">Dropdown</a>
+							<ul>
+								<li><a href="{{ site.baseurl }}/blog">Blog</a></li>
+								<li><a href="#">Magna phasellus</a></li>
+								<li><a href="#">Etiam dolore nisl</a></li>
+								<li>
+									<a href="">Phasellus consequat</a>
+									<ul>
+										<li><a href="#">Magna phasellus</a></li>
+										<li><a href="#">Etiam dolore nisl</a></li>
+										<li><a href="#">Veroeros feugiat</a></li>
+										<li><a href="#">Nisl sed aliquam</a></li>
+										<li><a href="#">Dolore adipiscing</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Veroeros feugiat</a></li>
+							</ul>
+						</li>
+						{% assign current = page.url | downcase | split: '/' %}
+						<li {% if current[1] == 'left-sidebar.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/left-sidebar.html">Left Sidebar</a></li>
+						<li {% if current[1] == 'right-sidebar.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/right-sidebar.html">Right Sidebar</a></li>
+						<li {% if current[1] == 'no-sidebar.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/no-sidebar.html">No Sidebar</a></li>
+					</ul>
+				</nav>
+
+				<div class="header-img">
+					<img src="{{ site.baseurl }}/assets/img/pic11.jpg">
+				</div>
+
+				-->
+
+		</div>
+	</div>

@@ -1,0 +1,4 @@
+---
+title: Workshops
+layout: default
+---

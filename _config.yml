@@ -1,0 +1,63 @@
+name: GeoNode Summit 2016
+description: "Main website of GeoNode Summit 2016"
+future: True
+logo: "/assets/img/hiu_logo.png"
+#markdown: redcarpet
+timezone: America/New_York
+permalink: none
+# Local Dev
+#baseurl:
+#url: http://localhost:8000
+#destination: _site
+# GitHub Pages
+baseurl: /geonode-summit-2016
+url: http://geonode.github.io/geonode-summit-2016
+destination: _site
+# Production
+#baseurl:
+#url: http://summit.geonode.org
+#destination: /var/www
+
+# Explicit excludes, including dotfiles to be safe
+exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, package.json, node_modules, backups, _assets/img/src-images]
+
+# Markdown Configuration
+#redcarpet:
+#  extensions: [with_toc_data]
+
+# General
+edit: true
+code: "https://github.com/geonode/geonode-summit-2016"
+branch: "gh-pages"
+disclaimer: ""
+privacy: ""
+copyright: ""
+
+# Analytics
+ga:
+  enabled: false
+  code: "UA-XXXXXX-1"
+
+# Twitter
+twittercard:
+  enabled: true
+  site: "@GeoNode"
+
+# Open Graph
+opengraph:
+  enabled: true
+
+# Debugging & Testing
+debug:
+  monolith: true
+
+# Dependencies Management
+deps:
+  angular:
+    version: "1.4.0-beta.4"
+  jquery:
+    version: "1.11.3"
+
+# Document & Media Storage
+storage:
+  bio_pics: "/assets/img/bios"

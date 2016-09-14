@@ -1,0 +1,30 @@
+---
+title: Speakers
+layout: default
+---
+<body class="left-sidebar">
+  {% include nav.html %}
+	<!-- Main -->
+	<div id="main-wrapper">
+	  <div class="container">
+		  <div class="row">
+			  <div class="8u -2u skel-cell-important">
+				  <!-- Content -->
+					<article class="box post">
+						<div id="summary-text">
+							<h2>Bios</h2>
+							<br>
+							<div style="text-align:left;margin-left:50px;margin-right:50px">
+							{% for speaker in site.categories.speakers %}
+							<h3 id='{{ speaker.name | slugify }}'>{{ speaker.name }}</h3>
+							{{ speaker.content }}
+							<p><p>
+							{% endfor %}
+							</div>
+						</div>
+						</article>
+					</div>
+				</div>
+			</div>
+  </div>
+</body>

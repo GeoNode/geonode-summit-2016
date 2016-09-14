@@ -1,0 +1,244 @@
+<!-- Header -->
+			<div id="header-wrapper">
+				<div id="header">
+
+
+  <script>
+  $(function() {
+    $( document ).tooltip({
+      position: {
+        my: "center bottom-15",
+        at: "center top",
+        using: function( position, feedback ) {
+          $( this ).css( position );
+          $( "<div>" )
+            .addClass( "arrow" )
+            .addClass( feedback.vertical )
+            .addClass( feedback.horizontal )
+            .appendTo( this );
+        }
+      }
+    });
+  });
+  </script>
+  <style>
+
+  #header-wrapper {
+  	padding-top: 0px;
+  }
+  #nav {
+  	text-align: left;
+  	padding: 0 5em;
+  }
+  #nav > ul > li {
+  	font-style: inherit;
+  	font-weight: 500;
+  }
+  #nav > ul > li.current >a,
+  #nav > ul > li >a:hover {
+  	opacity: 1;
+  	background-color: rgba(0,0,0,0.7);
+  }
+   #nav > ul > li > a {
+  	color: #C7C7C7;
+  	font-weight: 600;
+  }
+  #banner {
+  	padding-top: 1em;
+  	min-height: 500px;
+  	margin-top: 0px;
+    position: relative;
+
+  }
+
+  #banner header {
+  	background: transparent;
+  	margin-top: 5em;
+  	text-align: left;
+  	margin-left: 20px;
+  	margin-right: 20px;
+  }
+  #banner h1,
+  #banner h2,
+  #banner h4,
+  #banner header p {
+  	color: white;
+  }
+
+  #banner h1 {
+  	font-size: 60px;
+  	margin-top: 30px;
+  	margin-bottom: 30px
+  }
+
+  #banner .button {
+  	margin-top: 30px;
+  }
+
+  #banner header p {
+  	font-size: 18px;
+  	width: 70%;
+  }
+  .quiet {
+  	opacity: 0.9;
+  }
+  #banner a {
+    color: white;
+  }
+
+  .ui-tooltip, .arrow:after {
+    background: rgba(34, 30, 31, 0.98);
+    border: 2px solid #d73f3f;
+  }
+  .ui-tooltip {
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    font: bold 14px "Source Sans Pro", Sans-Serif;
+    text-transform: uppercase;
+    box-shadow: 0 0 7px black;
+  }
+  .arrow {
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+  }
+  .arrow.top {
+    top: -16px;
+    bottom: auto;
+  }
+  .arrow.left {
+    left: 20%;
+  }
+  .arrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 6px 5px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .arrow.top:after {
+    bottom: -20px;
+    top: auto;
+  }
+  .attribution-block {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white !important;
+    opacity: 0.6;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    font-size: 14px;
+  }
+  .ui-tooltip {
+    /* tooltip container box */
+    max-width: 450px !important;
+   }
+
+  </style>
+
+					<!-- Nav -->
+
+
+					<!-- Banner -->
+						<section id="banner">
+
+						  <nav id="nav">
+							<ul>
+								<li class="current"><a href="index.html">Home</a></li>
+								<li><a href="{{ site.baseurl }}/summary.html" id="about-button">About</a></li>
+								<li>
+									<a href="{{ site.baseurl }}/schedule.html">Schedule</a>
+									<ul>
+										<li><a href="{{ site.baseurl }}/schedule.html#monday">Monday, November 28</a></li>
+										<li><a href="{{ site.baseurl }}/schedule.html#tuesday">Tuesday, November 29</a></li>
+										<li><a href="{{ site.baseurl }}/schedule.html#wednesday">Wednesday, November 30</a></li>
+										<li><a href="{{ site.baseurl }}/schedule.html#thursday">Thursday, December 1</a></li>
+										<li><a href="{{ site.baseurl }}/schedule.html#friday">Friday, December 2</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="{{ site.baseurl }}/workshops">Workshops</a>
+									<ul>
+										{% for workshop in site.categories.workshops %}
+										<li><a href="{{ site.baseurl }}{{ workshop.url }}">{{ workshop.title }}</a></li>
+										{% endfor %}
+									</ul>
+								</li>
+                <li><a href="{{ site.baseurl }}/speakers" >Speakers</a></li>
+                <li><a href="{{ site.baseurl }}/afterhours" >After Hours</a></li>
+								<li>
+								<a href="http://twitter.com/intent/tweet?hashtags=geonode,opensource,gis">
+									<img src="{{ site.baseurl }}/assets/img/TwitterLogo.png" width="32" style="top:15px;position:relative">
+								</a>
+								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+								</li>
+							</ul>
+						</nav>
+							<header>
+								<p>November 28<sup>th</sup>‒ December 2<sup>nd</sup>, 2016, Rome, Italy</p>
+								<h1>GeoNode Summit 2016</h1>
+								<p class="quiet" style="font-size:20px">Join the growing opensource GIS commmunity for GeoNode Summit 2016 from November 28, 2016 to December 2, 2016 in beautiful Rome, Italy.  Kindly hosted by the WFP Headquarters GIS Unit.</p>
+								<a
+								target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdFdkHBVtbEEGMp2KuezujT7XZqr3Ig4JYyrHPskp9XGpeNEg/viewform" class="button">RSVP</a>
+                <div class="attribution-block">Map designed by <a href="https://www.mapbox.com/about/team/#eric-fischer">Eric Fisher</a> <a href="https://www.mapbox.com/about/maps/">©Mapbox</a> <a href="http://www.openstreetmap.org/about/">©OpenStreetMap</a></div>
+							</header>
+						</section>
+
+					<!-- Intro -->
+						<section id="intro" class="container">
+							<div class="row">
+								<div class="4u">
+									<section class="first">
+										<!--<i class="icon featured fa-cog"></i>-->
+										<i class="icon featured" style="padding-bottom: 0px;"><img src="{{ site.baseurl }}/assets/img/building78.png" height="80px"></i>
+										<header>
+											<h2>Secondary Cities and Urban Resilience </h2>
+										</header>
+										<!--<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>-->
+									</section>
+								</div>
+								<div class="4u">
+									<section class="middle">
+										<i class="icon featured alt fa-flash"></i>
+										<header>
+											<h2>Disaster Preparedness and Response</h2>
+										</header>
+										<!--<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>-->
+									</section>
+								</div>
+								<div class="4u">
+									<section class="last">
+										<i class="icon featured alt2 fa-plus-circle"></i>
+										<header>
+											<h2>Health and Infectious Disease</h2>
+										</header>
+										<!--<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>-->
+									</section>
+								</div>
+							</div>
+							<footer>
+								<div id="summary-section"></div>
+								<ul class="actions">
+									<li><a href="#projects" class="button big">Get Started Mapping</a></li>
+									<!--<li><a href="#summary-section" class="button alt big" id="summary-button">Learn More</a></li>-->
+                                    <li><a href="{{ site.baseurl }}/summary.html" class="button alt big" id="summary-button">Learn More</a></li>
+                                    <li><a href="http://www.missingmaps.org/leaderboards/#/missingmaps,aagmapathon/map" class="button alt big" id="summary-button" target="_blank">Metrics</a></li>
+								</ul>
+							</footer>
+						</section>
+
+
+
+				</div>
+			</div>

@@ -1,0 +1,12 @@
+.DS_Store
+.vagrant
+robot.txt
+Vagrantfile
+node_modules
+_site
+backups
+temp
+.temp
+*~
+.jekyll-metadata
+_site
