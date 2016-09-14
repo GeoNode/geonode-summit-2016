@@ -11,7 +11,7 @@ permalink: none
 #destination: _site
 # GitHub Pages
 baseurl: /geonode-summit-2016
-url: http://geonode.github.io/geonode-summit-2016
+url: http://geonode.org/geonode-summit-2016
 destination: _site
 # Production
 #baseurl:
