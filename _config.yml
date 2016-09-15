@@ -10,13 +10,13 @@ permalink: none
 #url: http://localhost:8000
 #destination: _site
 # GitHub Pages
-baseurl: /geonode-summit-2016
-url: http://geonode.org/geonode-summit-2016
-destination: _site
+#baseurl: /geonode-summit-2016
+#url: http://geonode.org/geonode-summit-2016
+#destination: _site
 # Production
-#baseurl:
-#url: http://summit.geonode.org
-#destination: /var/www
+baseurl:
+url: http://summit.geonode.org
+destination: _site
 
 # Explicit excludes, including dotfiles to be safe
 exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, package.json, node_modules, backups, _assets/img/src-images]
