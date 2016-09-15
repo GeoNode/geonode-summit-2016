@@ -85,3 +85,19 @@ geonode_summit_2016:
     - image: /assets/img/logos/wfp_hq_gis_logo.png
       alt: WFP HQ GIS Logo
       link: http://wfp.org
+  schedule:
+    - id: monday
+      title: Monday, November 28
+      location: FAO
+    - id: tuesday
+      title: Tuesday, November 29
+      location: FAO
+    - id: wednesday
+      title: Wednesday, November 30
+      location: WFP
+    - id: thursday
+      title: Thursday, December 1
+      location: FAO
+    - id: friday
+      title: Friday, December 2
+      location: FAO
