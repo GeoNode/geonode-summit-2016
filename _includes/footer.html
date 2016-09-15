@@ -15,21 +15,14 @@
 			<div id="footer-wrapper">
 				<section id="footer" class="container">
 					<div class="row">
-						<div class="8u">
+						<div class="8u" style="box-sizing: border-box;border-left: 10px solid transparent; border-right: 10px solid transparent;">
 							<section>
 								<header>
 									<h2>Highlights</h2>
 								</header>
-								<ul class="dates">
-									<li>
-										<span class="date">each<strong>Day</strong></span>
-										<h3><a href="#">Keynote Lectures</a></h3>
-										Join the growing opensource GIS community for lively discussion.
-									</li>
-								</ul>
+                <ul class="dates">
 								{% assign sorted_pages = (site.categories.highlights | sort: 'date') %}
 								{% for highlight in sorted_pages offset: 0 limit: 5 %}
-								<ul class="dates">
 									<li>
 										<span class="date">{{ highlight.date | date: "%B"}} <strong>{{ highlight.date | date: "%d"}}</strong></span>
 										<h3><a href="{{ site.baseurl }}{{ highlight.url }}">{{ highlight.title }}</a></h3>
@@ -38,43 +31,39 @@
 								{% endfor %}
 								</ul>
 							</section>
-
-<div style="position:relative">
-    <a href='http://geonode.org' style="margin-right:40px;position:absolute" target="blank"><img src="{{ site.baseurl }}/assets/img/logos/geonode_logo_white.png" alt="" /></a>
-    <a href='http://www.wfp.org/' style="position:absolute;margin-left:440px;margin-top:15px"target="blank"><img src="{{ site.baseurl }}/assets/img/logos/wfp_logo_72_white.png" alt="" /></a>
-</div>
-<div>
-    <a href='https://hiu.state.gov/' style="position:absolute;margin-top:125px;width:150px"target="blank"><img src="{{ site.baseurl }}/assets/img/hiu_logo.png" alt="" style="width:200px"/></a>
-</div>
-<div style="position:absolute;margin-top:230px;width:760px">
-<h6 style="font-weight:200">
-GeoNode Summit 2016 Code of Conduct: Professional ideas and information are exchanged most effectively at the Summit in an atmosphere free of abuse or harassment and characterized by courtesy and respect. To that end, the organizers expects all individuals who attend to conduct themselves in a manner that establishes an atmosphere free from discriminatory practices.
-</h6>
-<p>
-</div>
-						</div>
+              <div style="position:relative; ">
+              {% for sponsor in site.geonode_summit_2016.sponsors %}
+                <a href='{{ sponsor.link }}' style="margin-right:{% cycle '40', '440' %}px;margin-top: 0px;" target="blank">
+                  <img style="width:280px;" src="{{ site.baseurl }}{{ sponsor.image }}" alt="{{ sponsor.alt }}" />
+                </a>
+              {% endfor %}
+              </div>
+              <div>
+              </div>
+              <div style="position:absolute;margin-top:230px;width:760px">
+              <h6 style="font-weight:200">
+              GeoNode Summit 2016 Code of Conduct: Professional ideas and information are exchanged most effectively at the Summit in an atmosphere free of abuse or harassment and characterized by courtesy and respect. To that end, the organizers expects all individuals who attend to conduct themselves in a manner that establishes an atmosphere free from discriminatory practices.
+              </h6>
+              <p>
+              </div>
+            </div>
 						<div class="4u">
 							<section>
-								<header>
-									<h2>Featured Event: Disrupt Geo Lightning Talks</h2>
-								</header>
-								<a href="#" class="image featured"><img src="{{ site.baseurl }}/assets/img/lightning-earth.png" alt="" /></a>
-								<p>
-									In this special AAG session, we invite academics, industry professionals, non-academic researchers, and activists, basically anyone doing really interesting geo-things who wants to show them off.
-								</p>
+								<header><h2>Featured Keynote: {{ site.geonode_summit_2016.featured.title }}</h2></header>
+								<a href="#" class="image featured"><img src="{{ site.baseurl }}{{ site.geonode_summit_2016.featured.image }}" alt="" /></a>
+								<p>{{ site.geonode_summit_2016.featured.description }}</p>
 								<footer>
-									<a href="{{ site.baseurl }}/disrupt-geo.html" class="button" target="_blank">Find out more</a>
+									<a href="#" class="button" target="_blank">Find out more</a>
 								</footer>
 							</section>
 							<section>
-								<header>
-									<h2>Contact Us</h2>
-								</header>
+								<header><h2>Contact Us</h2></header>
 								<ul class="contact">
 									<li>
 										<h3>E-Mail</h3>
-										<p>Patrick Dufour<br><a href="mailto:pjdufour.dev@gmail.com">pjdufour.dev@gmail.com</a></p>
-										<p>WFP Headquarters GIS Unit<br><a href="mailto:hq.gis@wfp.org">hq.gis@wfp.org</a></p>
+                    {% for contact in site.geonode_summit_2016.contacts %}
+										<p>{{ contact.name }}<br><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
+                    {% endfor %}
 									</li>
 								</ul>
 								<h2><a href="https://docs.google.com/forms/d/e/1FAIpQLSdFdkHBVtbEEGMp2KuezujT7XZqr3Ig4JYyrHPskp9XGpeNEg/viewform" target="_blank">RSVP!</a></h2>

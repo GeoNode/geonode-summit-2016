@@ -68,11 +68,13 @@
   #banner h1 {
   	font-size: 60px;
   	margin-top: 30px;
-  	margin-bottom: 30px
+  	margin-bottom: 30px;
+		line-height: 62px;
   }
 
   #banner .button {
   	margin-top: 30px;
+		margin-right: 20px;
   }
 
   #banner header p {
@@ -146,13 +148,9 @@
    }
 
   </style>
-
 					<!-- Nav -->
-
-
 					<!-- Banner -->
 						<section id="banner">
-
 						  <nav id="nav">
 							<ul>
 								<li class="current"><a href="index.html">Home</a></li>
@@ -160,7 +158,7 @@
                 {% include nav_schedule.html %}
 								{% include nav_workshops.html %}
                 <li><a href="{{ site.baseurl }}/speakers" >Speakers</a></li>
-                <li><a href="{{ site.baseurl }}/afterhours" >After Hours</a></li>
+                <li><a href="#" >After Hours</a></li>
 								<li>
 								<a href="http://twitter.com/intent/tweet?hashtags=geonode,opensource,gis">
 									<img src="{{ site.baseurl }}/assets/img/TwitterLogo.png" width="32" style="top:15px;position:relative">
@@ -172,10 +170,10 @@
 							<header>
 								<p>November 28<sup>th</sup>‒ December 2<sup>nd</sup>, 2016, Rome, Italy</p>
 								<h1>GeoNode Summit 2016</h1>
-								<p class="quiet" style="font-size:20px">Join the growing opensource GIS commmunity for GeoNode Summit 2016 from November 28, 2016 to December 2, 2016 in beautiful Rome, Italy.  Kindly hosted by the WFP Headquarters GIS Unit.</p>
-								<a
-								target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdFdkHBVtbEEGMp2KuezujT7XZqr3Ig4JYyrHPskp9XGpeNEg/viewform" class="button">RSVP</a>
-                <div class="attribution-block">Map designed by <a href="https://www.mapbox.com/about/team/#eric-fischer">Eric Fisher</a> <a href="https://www.mapbox.com/about/maps/">©Mapbox</a> <a href="http://www.openstreetmap.org/about/">©OpenStreetMap</a></div>
+								<p class="quiet" style="font-size:20px">Join the growing opensource GIS commmunity for GeoNode Summit 2016 from November 28, 2016 to December 2, 2016 in beautiful Rome, Italy.  The Summit is kindly hosted WFP Headquarters GIS Unit.  The agenda and logistics are still under development.</p>
+								<a target="_blank" href="{{ site.geonode_summit_2016.link.rsvp }}" class="button">RSVP</a>
+								<a href="#" class="button">Logistics (Pending)</a>
+                <div class="attribution-block">Attribution placeholder</div>
 							</header>
 						</section>
 
@@ -186,41 +184,34 @@
 									<section class="first">
 										<!--<i class="icon featured fa-cog"></i>-->
 										<i class="icon featured" style="padding-bottom: 0px;"><img src="{{ site.baseurl }}/assets/img/building78.png" height="80px"></i>
-										<header>
-											<h2>GeoNode Community</h2>
-										</header>
-										<!--<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>-->
+										<header><h2>GeoNode Community</h2></header>
+										<p>Join GIS Analysts, Decision Makers, Developers, Data Scientists, and more.</p>
 									</section>
 								</div>
 								<div class="4u">
 									<section class="middle">
 										<i class="icon featured alt fa-flash"></i>
-										<header>
-											<h2>Open Source Software</h2>
-										</header>
+										<header><h2>Open Source Software</h2></header>
+										<p>Developing in the open from Day 1.  Open source from database to web client.</p>
 									</section>
 								</div>
 								<div class="4u">
 									<section class="last">
 										<i class="icon featured alt2 fa-plus-circle"></i>
-										<header>
-											<h2>Modern Geospatial Information Systems</h2>
-										</header>
+										<header><h2>Modern Geospatial Information Systems</h2></header>
+										<p>Leveraging the latest advances in open source GIS, including Openlayers 3, Tegola, and much more.</p>
 									</section>
 								</div>
 							</div>
 							<footer>
 								<div id="summary-section"></div>
 								<ul class="actions">
-									<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdFdkHBVtbEEGMp2KuezujT7XZqr3Ig4JYyrHPskp9XGpeNEg/viewform" class="button big">RSVP!</a></li>
+									<li><a target="_blank" href="{{ site.geonode_summit_2016.link.rsvp }}" class="button big">RSVP!</a></li>
 									<!--<li><a href="#summary-section" class="button alt big" id="summary-button">Learn More</a></li>-->
                   <li><a href="{{ site.baseurl }}/summary.html" class="button alt big" id="summary-button">Learn More</a></li>
-                  <li><a href="http://geonode.org/gallery/" class="button alt big" target="_blank">Gallery</a></li>
+                  <li><a href="{{ site.geonode_summit_2016.link.gallery }}" class="button alt big" target="_blank">Gallery</a></li>
 								</ul>
 							</footer>
 						</section>
-
-
-
 				</div>
 			</div>

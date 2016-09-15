@@ -1,4 +1,5 @@
 name: GeoNode Summit 2016
+title: GeoNode Summit 2016
 description: "Main website of GeoNode Summit 2016"
 future: True
 logo: "/assets/img/hiu_logo.png"
@@ -61,3 +62,26 @@ deps:
 # Document & Media Storage
 storage:
   bio_pics: "/assets/img/bios"
+
+
+# GeoNode Summit
+geonode_summit_2016:
+  link:
+    rsvp: https://docs.google.com/forms/d/e/1FAIpQLSdFdkHBVtbEEGMp2KuezujT7XZqr3Ig4JYyrHPskp9XGpeNEg/viewform
+    gallery: http://geonode.org/gallery/
+  featured:
+    title: TBD
+    image: "/assets/img/lightning-earth.png"
+    description: TBD
+  contacts:
+    - name: Patrick Dufour
+      email: pjdufour.dev@gmail.com
+    - name: WFP Headquarters GIS Unit
+      email: hq.gis@wfp.org
+  sponsors:
+    - image: /assets/img/logos/geonode_logo_white.png
+      alt: GeoNode Logo
+      link: http://geonode.org
+    - image: /assets/img/logos/wfp_hq_gis_logo.png
+      alt: WFP HQ GIS Logo
+      link: http://wfp.org
