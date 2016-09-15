@@ -70,6 +70,7 @@ tr {
 		<div class="container">
 				<article class="box post">
 					<h3>All events will take place in Rome, Italy either at the Food And Agriculture Organiation (FAO) or the World Food Programme (WFP).</h3>
+          <br>
           {% for day in site.geonode_summit_2016.schedule %}
           <section>
             <header><h2 id="{{ day.id }}">{{ day.title }} at {{ day.location }}</h2></header>
@@ -81,7 +82,10 @@ tr {
   							    <td class="event-time" style="{% if event.type == "break" %}color:orange;{% endif %}">{{ event.start }} – {{ event.end }}</td>
   							    <td class="event-content">
                       <h4 class="category"><span>{% if event.telecon == true %}<span class="special telecon">Telecon</span>{% endif %}{% if event.type == "keynote" %}<span class="special keynote">Keynote</span>{% endif %}</span><div style="{% if event.type == "break" %}color:orange;{% endif %}"><span style="font-weight: 700;">{{ event.title }}</span>{% if event.presenter %}<span> by {{ event.presenter }}{% endif %}</span></div></h4>
-                      <div>{{ event.content }}</div>
+                      <div>
+                        {% if event.location %}<span style="font-weight:700;">Location:</span><span> {{ event.location }}</span>{% endif %}
+                        {{ event.content }}
+                      </div>
                     </td>
                 </tr>
                 {% endif %}
