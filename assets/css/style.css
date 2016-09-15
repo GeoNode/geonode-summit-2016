@@ -516,11 +516,12 @@
 				ul.dates h3
 				{
 					font-size: 1.1em;
+					margin: 0 0 0 20px;
 				}
 
 				ul.dates p
 				{
-					margin: 0;
+					margin: 0 0 0 20px;
 				}
 
 				ul.dates li:first-child

@@ -1,0 +1,8 @@
+<li>
+  <a href="{{ site.baseurl }}/workshops">Workshops</a>
+  <ul>
+    {% for workshop in site.categories.workshops %}
+    <li><a href="{{ site.baseurl }}{{ workshop.url }}">{{ workshop.title }}</a></li>
+    {% endfor %}
+  </ul>
+</li>

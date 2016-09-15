@@ -157,24 +157,8 @@
 							<ul>
 								<li class="current"><a href="index.html">Home</a></li>
 								<li><a href="{{ site.baseurl }}/summary.html" id="about-button">About</a></li>
-								<li>
-									<a href="{{ site.baseurl }}/schedule.html">Schedule</a>
-									<ul>
-										<li><a href="{{ site.baseurl }}/schedule.html#monday">Monday, November 28</a></li>
-										<li><a href="{{ site.baseurl }}/schedule.html#tuesday">Tuesday, November 29</a></li>
-										<li><a href="{{ site.baseurl }}/schedule.html#wednesday">Wednesday, November 30</a></li>
-										<li><a href="{{ site.baseurl }}/schedule.html#thursday">Thursday, December 1</a></li>
-										<li><a href="{{ site.baseurl }}/schedule.html#friday">Friday, December 2</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="{{ site.baseurl }}/workshops">Workshops</a>
-									<ul>
-										{% for workshop in site.categories.workshops %}
-										<li><a href="{{ site.baseurl }}{{ workshop.url }}">{{ workshop.title }}</a></li>
-										{% endfor %}
-									</ul>
-								</li>
+                {% include nav_schedule.html %}
+								{% include nav_workshops.html %}
                 <li><a href="{{ site.baseurl }}/speakers" >Speakers</a></li>
                 <li><a href="{{ site.baseurl }}/afterhours" >After Hours</a></li>
 								<li>
@@ -203,7 +187,7 @@
 										<!--<i class="icon featured fa-cog"></i>-->
 										<i class="icon featured" style="padding-bottom: 0px;"><img src="{{ site.baseurl }}/assets/img/building78.png" height="80px"></i>
 										<header>
-											<h2>Secondary Cities and Urban Resilience </h2>
+											<h2>GeoNode Community</h2>
 										</header>
 										<!--<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>-->
 									</section>
@@ -212,28 +196,26 @@
 									<section class="middle">
 										<i class="icon featured alt fa-flash"></i>
 										<header>
-											<h2>Disaster Preparedness and Response</h2>
+											<h2>Open Source Software</h2>
 										</header>
-										<!--<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>-->
 									</section>
 								</div>
 								<div class="4u">
 									<section class="last">
 										<i class="icon featured alt2 fa-plus-circle"></i>
 										<header>
-											<h2>Health and Infectious Disease</h2>
+											<h2>Modern Geosaptial Information Systems</h2>
 										</header>
-										<!--<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>-->
 									</section>
 								</div>
 							</div>
 							<footer>
 								<div id="summary-section"></div>
 								<ul class="actions">
-									<li><a href="#projects" class="button big">Get Started Mapping</a></li>
+									<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdFdkHBVtbEEGMp2KuezujT7XZqr3Ig4JYyrHPskp9XGpeNEg/viewform" class="button big">RSVP!</a></li>
 									<!--<li><a href="#summary-section" class="button alt big" id="summary-button">Learn More</a></li>-->
-                                    <li><a href="{{ site.baseurl }}/summary.html" class="button alt big" id="summary-button">Learn More</a></li>
-                                    <li><a href="http://www.missingmaps.org/leaderboards/#/missingmaps,aagmapathon/map" class="button alt big" id="summary-button" target="_blank">Metrics</a></li>
+                  <li><a href="{{ site.baseurl }}/summary.html" class="button alt big" id="summary-button">Learn More</a></li>
+                  <li><a href="http://geonode.org/gallery/" class="button alt big" target="_blank">Gallery</a></li>
 								</ul>
 							</footer>
 						</section>

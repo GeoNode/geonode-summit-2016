@@ -10,24 +10,8 @@
 							    {% assign current = page.url | downcase | split: '/' %}
 								<li {% if current[1] == 'index.html' %}class="current"{% endif %}><a href="{{ site.baseurl }}/index.html">Home</a></li>
 								<li {% if current[1] == 'summary.html' %}class="current"{% endif %}><a href="{{ site.baseurl }}/summary.html" id="about-button">About</a></li>
-								<li {% if current[1] == 'summary.html' %}class="current"{% endif %}>
-									<a href="{{ site.baseurl }}/schedule.html">Schedule</a>
-									<ul>
-										<li><a href="{{ site.baseurl }}/schedule.html#monday">Monday, November 28</a></li>
-										<li><a href="{{ site.baseurl }}/schedule.html#tuesday">Tuesday, November 29</a></li>
-										<li><a href="{{ site.baseurl }}/schedule.html#wednesday">Wednesday, November 30</a></li>
-										<li><a href="{{ site.baseurl }}/schedule.html#thursday">Thursday, December 1</a></li>
-										<li><a href="{{ site.baseurl }}/schedule.html#friday">Friday, December 2</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="{{ site.baseurl }}/workshops">Workshops</a>
-									<ul>
-										{% for workshop in site.categories.workshops %}
-										<li><a href="{{ site.baseurl }}{{ workshop.url }}">{{ workshop.title }}</a></li>
-										{% endfor %}
-									</ul>
-								</li>
+								{% include nav_schedule.html %}
+                {% include nav_workshops.html %}
 								<li {% if current[1] == 'bios.html' %}class="current"{% endif %}><a href="{{ site.baseurl }}/speakers" >Speakers</a></li>
 								<li><a href="{{ site.baseurl }}/afterhours" target="_blank">After Hours</a></li>
 								<li>
