@@ -1,4 +1,29 @@
 ---
 title: Workshops
-layout: default
+layout: base
 ---
+<body class="left-sidebar">
+  {% include nav.html %}
+	<!-- Main -->
+	<div id="main-wrapper">
+	  <div class="container">
+		  <div class="row">
+			  <div class="8u -2u skel-cell-important">
+				  <!-- Content -->
+					<article class="box post">
+						<div id="summary-text">
+							<h2>Workshops</h2>
+							<br>
+							<div style="text-align:left;margin-left:50px;margin-right:50px">
+							{% for workshop in site.categories.workshops %}
+							<h3 id='{{ workshop.title | slugify }}'>{{ workshop.title }}</h3>
+							<p><a href="{{ workshop.url }}">Learn More</a><p>
+							{% endfor %}
+							</div>
+						</div>
+						</article>
+					</div>
+				</div>
+			</div>
+  </div>
+</body>

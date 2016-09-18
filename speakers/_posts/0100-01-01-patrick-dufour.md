@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: text
 category: speakers
 name: "Patrick Dufour"
 ---

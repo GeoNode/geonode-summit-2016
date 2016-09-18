@@ -7,4 +7,4 @@ keywords:
   - QGIS
 image: /assets/img/mekelle.png
 ---
-Workshop on ArcMap & GIS Integration
+Workshop on ArcMap & QGIS Integration
