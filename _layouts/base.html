@@ -1,0 +1,8 @@
+---
+layout: default
+---
+{% capture v %}{{ site.time | date: '%Y-%m-%dT%H:%M' }}{% endcapture %}
+<html class="svg">
+  <head>{% include header.html %}</head>
+	<body>{{ content }}{% include footer.html %}</body>
+</html>

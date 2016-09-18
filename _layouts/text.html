@@ -1,0 +1,30 @@
+---
+title: Summary
+layout: base
+---
+<body class="left-sidebar">
+  {% include nav.html %}
+	<div id="main-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="8u -2u skel-cell-important">
+					<article class="box post">
+						<div id="summary-text">
+              <header style="display: table; width: 100%;">
+                <h2 id="{{ page.id }}" style="display: table-cell;">{{ page.title }}</h2>
+                {% if site.edit == true %}
+                <h2 style="display: table-cell;">
+                  <a data-toggle="tooltip" data-placement="bottom" title="Edit this page"
+                  target="_blank" href="{{ site.code }}/edit/{{ site.branch }}/{{ page.path }}"><i class="fa fa-edit"></i>
+                  </a>
+                </h2>
+                {% endif %}
+              </header>
+              {{ content }}
+            </div>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>

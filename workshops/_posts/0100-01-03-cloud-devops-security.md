@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: text
 category: workshops
 title: "Cloud, DevOps, and Security"
 keywords:

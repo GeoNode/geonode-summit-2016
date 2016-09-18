@@ -1,78 +1,60 @@
-		<!-- Footer -->
-
-<!--Google Analytics code-->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-47013923-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-			<div id="footer-wrapper">
-				<section id="footer" class="container">
-					<div class="row">
-						<div class="8u" style="box-sizing: border-box;border-left: 10px solid transparent; border-right: 10px solid transparent;">
-							<section>
-								<header>
-									<h2>Highlights</h2>
-								</header>
-                <ul class="dates">
-								{% assign sorted_pages = (site.categories.highlights | sort: 'date') %}
-								{% for highlight in sorted_pages offset: 0 limit: 5 %}
-									<li>
-										<span class="date">{{ highlight.date | date: "%B"}} <strong>{{ highlight.date | date: "%d"}}</strong></span>
-										<h3><a href="{{ site.baseurl }}{{ highlight.url }}">{{ highlight.title }}</a></h3>
-										{{ highlight.excerpt }}
-									</li>
-								{% endfor %}
-								</ul>
-							</section>
-              <div style="position:relative; ">
-              {% for sponsor in site.geonode_summit_2016.sponsors %}
-                <a href='{{ sponsor.link }}' style="margin-right:{% cycle '40', '440' %}px;margin-top: 0px;" target="blank">
-                  <img style="width:280px;" src="{{ site.baseurl }}{{ sponsor.image }}" alt="{{ sponsor.alt }}" />
-                </a>
+<div id="footer-wrapper">
+	<section id="footer" class="container">
+		<div class="row">
+			<div class="8u" style="box-sizing: border-box;border-left: 10px solid transparent; border-right: 10px solid transparent;">
+				<section>
+					<header>
+						<h2>Highlights</h2>
+					</header>
+          <ul class="dates">
+					{% assign sorted_pages = (site.categories.highlights | sort: 'date') %}
+					{% for highlight in sorted_pages offset: 0 limit: 5 %}
+						<li>
+							<span class="date">{{ highlight.date | date: "%B"}} <strong>{{ highlight.date | date: "%d"}}</strong></span>
+							<h3><a href="{{ site.baseurl }}{{ highlight.url }}">{{ highlight.title }}</a></h3>
+							{{ highlight.excerpt }}
+						</li>
+					{% endfor %}
+					</ul>
+				</section>
+        <div style="position:relative; ">
+        {% for sponsor in site.geonode_summit_2016.sponsors %}
+          <a href='{{ sponsor.link }}' style="margin-right:{% cycle '40', '440' %}px;margin-top: 0px;" target="blank">
+            <img style="width:280px;" src="{{ site.baseurl }}{{ sponsor.image }}" alt="{{ sponsor.alt }}" />
+          </a>
+        {% endfor %}
+        </div>
+        <div>
+        </div>
+        <div style="position:absolute;margin-top:40px;width:760px">
+        <h6 style="font-weight:200">
+        GeoNode Summit 2016 Code of Conduct: Professional ideas and information are exchanged most effectively at the Summit in an atmosphere free of abuse or harassment and characterized by courtesy and respect. To that end, the organizers expects all individuals who attend to conduct themselves in a manner that establishes an atmosphere free from discriminatory practices.
+        </h6>
+        <p>
+        </div>
+      </div>
+			<div class="4u">
+				<section>
+					<header><h2>Featured Keynote: {{ site.geonode_summit_2016.featured.title }}</h2></header>
+					<a href="#" class="image featured"><img src="{{ site.baseurl }}{{ site.geonode_summit_2016.featured.image }}" alt="" /></a>
+					<p>{{ site.geonode_summit_2016.featured.description }}</p>
+					<footer>
+						<a href="#" class="button" target="_blank">Find out more</a>
+					</footer>
+				</section>
+				<section>
+					<header><h2>Contact Us</h2></header>
+					<ul class="contact">
+						<li>
+							<h3>E-Mail</h3>
+              {% for contact in site.geonode_summit_2016.contacts %}
+							<p>{{ contact.name }}<br><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
               {% endfor %}
-              </div>
-              <div>
-              </div>
-              <div style="position:absolute;margin-top:230px;width:760px">
-              <h6 style="font-weight:200">
-              GeoNode Summit 2016 Code of Conduct: Professional ideas and information are exchanged most effectively at the Summit in an atmosphere free of abuse or harassment and characterized by courtesy and respect. To that end, the organizers expects all individuals who attend to conduct themselves in a manner that establishes an atmosphere free from discriminatory practices.
-              </h6>
-              <p>
-              </div>
-            </div>
-						<div class="4u">
-							<section>
-								<header><h2>Featured Keynote: {{ site.geonode_summit_2016.featured.title }}</h2></header>
-								<a href="#" class="image featured"><img src="{{ site.baseurl }}{{ site.geonode_summit_2016.featured.image }}" alt="" /></a>
-								<p>{{ site.geonode_summit_2016.featured.description }}</p>
-								<footer>
-									<a href="#" class="button" target="_blank">Find out more</a>
-								</footer>
-							</section>
-							<section>
-								<header><h2>Contact Us</h2></header>
-								<ul class="contact">
-									<li>
-										<h3>E-Mail</h3>
-                    {% for contact in site.geonode_summit_2016.contacts %}
-										<p>{{ contact.name }}<br><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
-                    {% endfor %}
-									</li>
-								</ul>
-								<h2><a href="https://docs.google.com/forms/d/e/1FAIpQLSdFdkHBVtbEEGMp2KuezujT7XZqr3Ig4JYyrHPskp9XGpeNEg/viewform" target="_blank">RSVP!</a></h2>
-							</section>
-						</div>
-					</div>
-
+						</li>
+					</ul>
+					<h2><a href="https://docs.google.com/forms/d/e/1FAIpQLSdFdkHBVtbEEGMp2KuezujT7XZqr3Ig4JYyrHPskp9XGpeNEg/viewform" target="_blank">RSVP!</a></h2>
 				</section>
 			</div>
-
-	</body>
-</html>
+		</div>
+	</section>
+</div>

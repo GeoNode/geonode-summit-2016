@@ -153,12 +153,12 @@
 						<section id="banner">
 						  <nav id="nav">
 							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
-								<li><a href="{{ site.baseurl }}/summary.html" id="about-button">About</a></li>
+								<li class="current"><a href="{{ site.baseurl }}/">Home</a></li>
+								<li><a href="{{ site.baseurl }}/about" id="about-button">About</a></li>
                 {% include nav_schedule.html %}
 								{% include nav_workshops.html %}
                 <li><a href="{{ site.baseurl }}/speakers" >Speakers</a></li>
-                <li><a href="#" >After Hours</a></li>
+                {% include nav_afterhours.html %}
 								<li>
 								<a href="http://twitter.com/intent/tweet?hashtags=geonode,opensource,gis">
 									<img src="{{ site.baseurl }}/assets/img/TwitterLogo.png" width="32" style="top:15px;position:relative">
@@ -199,7 +199,7 @@
 									<section class="last">
 										<i class="icon featured alt2 fa-plus-circle"></i>
 										<header><h2>Modern Geospatial Information Systems</h2></header>
-										<p>Leveraging the latest advances in open source GIS, including Openlayers 3, Tegola, and much more.</p>
+										<p>Leveraging the latest advances in open source GIS, including OpenLayers 3, Tegola, and much more.</p>
 									</section>
 								</div>
 							</div>
@@ -207,8 +207,7 @@
 								<div id="summary-section"></div>
 								<ul class="actions">
 									<li><a target="_blank" href="{{ site.geonode_summit_2016.link.rsvp }}" class="button big">RSVP!</a></li>
-									<!--<li><a href="#summary-section" class="button alt big" id="summary-button">Learn More</a></li>-->
-                  <li><a href="{{ site.baseurl }}/summary.html" class="button alt big" id="summary-button">Learn More</a></li>
+                  <li><a href="{{ site.baseurl }}/about" class="button alt big" id="about-button">Learn More</a></li>
                   <li><a href="{{ site.geonode_summit_2016.link.gallery }}" class="button alt big" target="_blank">Gallery</a></li>
 								</ul>
 							</footer>

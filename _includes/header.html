@@ -1,24 +1,53 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>{{ site.title }}</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="{{ site.description }}" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="{{ site.baseurl }}/assets/css/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-		<script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
-		<script src="{{ site.baseurl }}/assets/js/jquery.dropotron.min.js"></script>
-		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-		<script src="{{ site.baseurl }}/assets/js/skel.min.js"></script>
-		<script src="{{ site.baseurl }}/assets/js/skel-layers.min.js"></script>
-		<script src="{{ site.baseurl }}/assets/js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/skel.css" />
-			<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/style.css" />
-			<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/style-desktop.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ie/v8.css" /><![endif]-->
-	</head>
-
-   {% include twitter_card.html %}
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="google" content="notranslate" />
+<meta http-equiv="Content-Language" content="en_US" />
+{% if site.twittercard.enabled == true %}
+	{% if page.categories contains "products" %}
+		{% include seo/twittercard_product.html %}
+	{% else %}
+		{% include seo/twittercard_default.html %}
+	{% endif %}
+{% endif %}
+{% if site.opengraph.enabled == true %}
+	{% if page.categories contains "products" %}
+		{% include seo/opengraph_product.html %}
+	{% else %}
+		{% include seo/opengraph_default.html %}
+	{% endif %}
+{% endif %}
+{% for dns in page.dns_prefetch %}
+		<link rel="dns-prefetch" href="{{ dns }}">
+{% endfor %}
+<title>{{ page.title }}</title>
+<link rel="shortcut icon" type="image/ico" href="{{ site.baseurl }}/favicon.ico" />
+<meta name="description" content="{{ site.description }}" />
+<meta name="keywords" content="" />
+<!--[if lte IE 8]><script src="{{ site.baseurl }}/assets/css/ie/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/jquery.dropotron.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="{{ site.baseurl }}/assets/js/skel.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/skel-layers.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/init.js"></script>
+<noscript>
+	<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/skel.css" />
+	<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/style.css" />
+	<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/style-desktop.css" />
+</noscript>
+<!--[if lte IE 8]><link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ie/v8.css" /><![endif]-->
+<style>
+  a[data-toggle="tooltip"] {
+	  cursor: pointer;
+  }
+	a[data-toggle="tooltip"]:hover {
+		color: rgb(215, 63, 63);
+	}
+</style>
+<!-- Google Analytics -->
+{% if site.ga.enabled == true %}
+	{% include analytics/analytics_ga_snippet.html %}
+{% endif %}
+<script>
+  $(function () { $('[data-toggle="tooltip"]').tooltip() })
+</script>

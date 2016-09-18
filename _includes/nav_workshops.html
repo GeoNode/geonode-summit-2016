@@ -1,7 +1,7 @@
 <li>
   <a href="{{ site.baseurl }}/workshops">Workshops</a>
   <ul>
-    {% for workshop in site.categories.workshops %}
+    {% for workshop in site.categories.workshops reversed %}
     <li><a href="{{ site.baseurl }}{{ workshop.url }}">{{ workshop.title }}</a></li>
     {% endfor %}
   </ul>
