@@ -2,7 +2,11 @@
   {% for workshop in site.categories.workshops reversed %}
   <div class="4u">
     <section class="box">
-      <a href="{{ workshop.url }}" class="image featured"><img src="{{ site.baseurl }}{{ workshop.image }}" alt="" /></a>
+      <a href="{{ workshop.url }}" class="image featured">
+        {% if workshop.image %}
+        <img src="{{ site.baseurl }}{{ workshop.image }}" alt="" />
+        {% endif %}
+      </a>
       <header>
         <h3>{{ workshop.title }}</h3>
       </header>

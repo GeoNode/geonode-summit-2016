@@ -1,5 +1,5 @@
 ---
-layout: text
+layout: single
 category: workshops
 title: "Systems Integration"
 keywords:
@@ -7,6 +7,6 @@ keywords:
   - OGC
   - HDX
   - CKAN
-image: /assets/img/pokhara.png
+#image: 
 ---
 Workshop on Systems Integration: OGC Services, HDX, etc.

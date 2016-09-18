@@ -1,5 +1,5 @@
 ---
-layout: text
+layout: single
 category: speakers
 name: "Patrick Dufour"
 ---

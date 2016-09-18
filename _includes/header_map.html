@@ -1,0 +1,152 @@
+<script src="http://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+<script src="http://openlayers.org/en/v3.18.2/build/ol.js"></script>
+<script>
+	$(function(){
+
+    var defaultStyle = {};
+		{% for s in page.map.defaultStyle; %}defaultStyle["{{ s.name }}"]  = "{{ s.value }}";{% endfor %}
+
+    var markerIcons = {{ page.map.markerIcons | jsonify }};
+
+    var features = [];
+
+    var getMarkerText = function(type)
+		{
+			return markerIcons[type] || "";
+		};
+
+{% for f in page.map.features %}
+    features.push(new ol.Feature({
+			title: "{{ f.title }}",
+      fillColor: ("{{ f.style.fillColor }}" || defaultStyle.fillColor || "#0000FF"),
+      strokeColor: ("{{ f.style.strokeColor }}" || defaultStyle.strokeColor || "#0000FF"),
+      fontFamily: ("{{ f.style.fontFamily }}" || defaultStyle.fontFamily || "Arial"),
+      fontSize: ("{{ f.style.fontSize }}" || defaultStyle.fontSize || "20px"),
+			fontColor: ("{{ f.style.fontColor }}" || defaultStyle.fontColor || "black"),
+			type: "{{ f.type }}",
+			description: "{{ f.description }}",
+			markerText: getMarkerText("{{ f.type }}"),
+			geometry: new ol.geom.Point(ol.proj.transform([{{ f.lonlat | join : ", "}}], 'EPSG:4326', 'EPSG:3857'))
+		}));{% endfor %}
+
+		function pointStyleFunction(feature, resolution)
+		{
+			var styles = [];
+
+			styles.push(new ol.style.Style({
+        image: new ol.style.Circle({
+	        radius: 18,
+	        fill: new ol.style.Fill({
+            color: feature.get('fillColor')
+          }),
+	        stroke: new ol.style.Stroke({
+            color: feature.get('strokeColor'),
+            width: 1
+          })
+	      }),
+	      text: new ol.style.Text({
+	        textAlign:  "center",
+	        textBaseline: "middle",
+	        font: "normal 18px FontAwesome",
+	        text: feature.get('markerText'),
+	        fill: new ol.style.Fill({color: "white"}),
+	        offsetX: 0,
+	        offsetY: 0,
+	        rotation: 0
+	      })
+			}));
+
+			/*styles.push(new ol.style.Style({
+        image: new ol.style.Circle({
+	        radius: 12,
+	        fill: new ol.style.Fill({
+            color: feature.get('fillColor')
+          }),
+	        stroke: new ol.style.Stroke({
+            color: feature.get('strokeColor'),
+            width: 1
+          })
+	      }),
+	      text: new ol.style.Text({
+	        textAlign: "start",
+	        textBaseline: "middle",
+	        font: ("normal "+ feature.get("fontSize") + " " + feature.get("fontFamily")),
+	        text: feature.get('title'),
+	        fill: new ol.style.Fill({color: feature.get("fontColor")}),
+	        offsetX: 24,
+	        offsetY: 0,
+	        rotation: 0
+	      })
+			}));*/
+
+      return styles;
+    };
+
+    var vectorSource = new ol.source.Vector({ features: features });
+    var vectorLayer = new ol.layer.Vector({ source: vectorSource, style: pointStyleFunction });
+    var center = ol.proj.transform([{{ page.map.view.center | join : ", "}}], 'EPSG:4326', 'EPSG:3857');
+
+    var controls = ol.control.defaults({
+				attributionOptions: ({
+					collapsible: false
+				})
+			}).extend([
+				new ol.control.FullScreen()
+			]);
+
+    var map = new ol.Map({
+        layers: [
+          new ol.layer.Tile({ source: new ol.source.OSM()}),
+          vectorLayer
+        ],
+        target: '{{ page.map.id }}',
+				controls: controls,
+				interactions: ol.interaction.defaults().extend([
+					new ol.interaction.DragRotateAndZoom()
+				]),
+        view: new ol.View({
+          center: center,
+          zoom: {{ page.map.view.zoom }}
+        })
+      });
+
+			var popupElement = document.getElementById("{{ page.map.popup.id }}");
+			var popup = new ol.Overlay({
+				element: popupElement,
+				positioning: 'bottom-center',
+				stopEvent: false,
+				offset: [0, -24]
+			});
+			map.addOverlay(popup);
+
+			map.on('click', function(evt) {
+				$(popupElement).popover('destroy');
+        var feature = map.forEachFeatureAtPixel(evt.pixel, function(feature) { return feature; });
+        if (feature)
+				{
+					var lines = [];
+					if(feature.get("description"))
+					{
+						var description = feature.get("description");
+						lines.push(description);
+					}
+					//feature.get("title");
+          var coordinates = feature.getGeometry().getCoordinates();
+          popup.setPosition(coordinates);
+
+          $(popupElement).popover({
+						"title": feature.get("title"),
+            'placement': 'top',
+            'html': true,
+            'content': '<div style="width: 200px;">'+lines.join("<br>")+"</div>",
+          });
+          $(popupElement).popover('show');
+        }
+				else
+				{
+          //$(popupElement).popover('destroy');
+        }
+      });
+
+	});
+</script>

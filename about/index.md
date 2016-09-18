@@ -1,15 +1,15 @@
 ---
 title: About GeoNode Summit 2016
-layout: text
+layout: single
 ---
 
 ### What is GeoNode?
 
-GeoNode is a web-based Spatial Data Infrastructure (SDI) that enables sharing and collaborating on geospatial data.  The platform is built on a completely opensource stack, including the widely used [PostgreSQL/PostGIS](http://postgis.net/) and [GeoServer](http://geoserver.org/).  Additionally, GeoNode is integrating the latest advances in opensource GIS software, including [OpenLayers 3](http://openlayers.org/), [Tegola](http://tegola.io/), and many more.
+GeoNode is a web-based Spatial Data Infrastructure (SDI) that enables sharing and collaborating on geospatial data.  Users can upload existing shapefiles, edit data, and publish finished maps.  GeoNode can also host static documents, such as PDF maps.  GeoNode has robust support for OGC services, which streamlines integration with other systems.  For example, data from GeoNode can be easily downloaded as a shapefile or shared on HDX.
 
-### Open Source Origins
+### Open Source
 
-GeoNode was created in 2009.
+GeoNode was created in 2009 and is developed in the open.  The platform is built on a fully opensource stack, including the widely used [PostgreSQL/PostGIS](http://postgis.net/) and [GeoServer](http://geoserver.org/).  Additionally, GeoNode is integrating the latest advances in opensource GIS software, including [OpenLayers 3](http://openlayers.org/), [Tegola](http://tegola.io/), and many more.
 
 ### What is a GeoNode Summit?
 

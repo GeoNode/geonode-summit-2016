@@ -1,6 +1,6 @@
 ---
 title: Social Media Toolkit
-layout: text
+layout: single
 ---
 
 
@@ -42,3 +42,8 @@ layout: text
 
 - I'll see you in Rome for GeoNode Summit 2016 #geonode #opensource #gis
 - [Tweet this!](https://twitter.com/intent/tweet?text=I'll see you in Rome for GeoNode Summit 2016&amp;hashtags=geonode,opensource,gis)
+
+
+### Periscope
+
+TBD

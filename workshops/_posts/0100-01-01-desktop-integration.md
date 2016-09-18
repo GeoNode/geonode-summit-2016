@@ -1,10 +1,10 @@
 ---
-layout: text
+layout: single
 category: workshops
 title: "Desktop Integration"
 keywords:
   - ArcMap
   - QGIS
-image: /assets/img/mekelle.png
+#image: ""
 ---
 Workshop on ArcMap & QGIS Integration

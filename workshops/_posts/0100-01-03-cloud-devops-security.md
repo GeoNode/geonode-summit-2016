@@ -1,5 +1,5 @@
 ---
-layout: text
+layout: single
 category: workshops
 title: "Cloud, DevOps, and Security"
 keywords:
@@ -8,6 +8,6 @@ keywords:
   - Docker
   - CF
   - Boundless Exchange
-image: /assets/img/malaria-spraying.jpg
+#image: 
 ---
 Ansible, Chef, Docker, CF, Boundless Exchange,

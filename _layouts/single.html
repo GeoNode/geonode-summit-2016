@@ -21,6 +21,13 @@ layout: base
                 {% endif %}
               </header>
               {{ content }}
+              {% if page.map %}
+              <div style="width:{{ page.map.size.width }};height:{{ page.map.size.height }};">
+                <div id="{{ page.map.id }}">
+                  <div id="{{ page.map.popup.id }}"></div>
+                </div>
+              </div>
+              {% endif %}
             </div>
 					</article>
 				</div>

@@ -5,17 +5,13 @@
 			<ul>
 			  {% assign current = page.url | downcase | split: '/' %}
 				<li><a href="{{ site.baseurl }}/">Home</a></li>
-				<li><a href="{{ site.baseurl }}/about" id="about-button">About</a></li>
+				{% include nav_about.html %}
+				{% include nav_logistics.html %}
 				{% include nav_schedule.html %}
         {% include nav_workshops.html %}
 				<li><a href="{{ site.baseurl }}/speakers" >Speakers</a></li>
 				{% include nav_afterhours.html %}
-				<li>
-					<a href="http://twitter.com/intent/tweet?hashtags=geonode,opensource,gis">
-						<img src="{{ site.baseurl }}/assets/img/TwitterLogo.png" width="32" style="top:15px;position:relative">
-					</a>
-				  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-				</li>
+				{% include nav_twitter.html %}
 			</ul>
 		</nav>
 	</div>
