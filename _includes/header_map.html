@@ -119,7 +119,7 @@
 			});
 			map.addOverlay(popup);
 
-			map.on('click', function(evt) {
+			map.on('singleclick', function(evt) {
 				$(popupElement).popover('destroy');
         var feature = map.forEachFeatureAtPixel(evt.pixel, function(feature) { return feature; });
         if (feature)
@@ -130,7 +130,7 @@
 						var description = feature.get("description");
 						lines.push(description);
 					}
-					//feature.get("title");
+					
           var coordinates = feature.getGeometry().getCoordinates();
           popup.setPosition(coordinates);
 
