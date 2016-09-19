@@ -3,13 +3,7 @@ title: Schedule
 layout: base
 ---
 
-<script>
-  $(function() {
-    $('table').accordion({header: 'h4.category', collapsible: true, active: false  });
-  });
-</script>
 <style type="text/css">
-
 
 .event-time {
   width: 220px;
@@ -67,24 +61,39 @@ tr {
 }
 </style>
 
+<script>
+  $(function() {
+
+    $('table.accordion').accordion({
+      header: '.event-title',
+      collapsible: true,
+      active: false,
+      heightStyle: "content"
+    });
+
+  });
+</script>
 <body class="no-sidebar">
 	{% include nav.html %}
 	<div id="main-wrapper">
 		<div class="container">
 				<article class="box post">
-					<h3>All events will take place in Rome, Italy either at the Food And Agriculture Organiation (FAO) or the World Food Programme (WFP).</h3>
+					<h3>All events will take place in Rome, Italy either at the Food And Agriculture Organiation (FAO) or the World Food Programme (WFP).  For a map of key locations, please take a look at the <a href="{{ site.baseurl }}/logistics#map">Logistics map</a>.</h3>
           <br>
           {% for day in site.geonode_summit_2016.schedule %}
           <section>
-            <header><h2 id="{{ day.id }}">{{ day.title }} at {{ day.location }}</h2></header>
+            <header>
+              <h2 id="{{ day.id }}"><a href="#{{ day.id }}">{{ day.title }} [ {{ day.theme }} ]</a></h2>
+              <h3 id="{{ day.id }}-location">At {{ day.location }}</h3>
+            </header>
             <p>
-              <table border="0">
+              <table class="accordion" border="0">
                 {% for event in site.categories.schedule reversed %}
                 {% if day.id == event.day %}
                 <tr>
   							    <td class="event-time">{{ event.start }} – {{ event.end }}</td>
   							    <td class="event-content">
-                      <h4 class="category"><span>{% if event.telecon == true %}<span class="special telecon">Telecon</span>{% endif %}{% if event.type == "keynote" %}<span class="special keynote">Keynote</span>{% elsif event.type == "workshop" %}<span class="special workshop">Workshop</span>{% endif %}</span><div style="{% if event.type == "break" or event.type == "lunch" %}color:orange;{% endif %}">{% if event.type == "break" %}<i class="fa fa-coffee" style="margin-right: 4px;"></i>{% elsif event.type == "lunch" %}<i class="fa fa-cutlery" style="margin-right: 4px;"></i>{% endif %}<span style="font-weight: 700;">{{ event.title }}</span>{% if event.presenter %}<span> by {{ event.presenter }}{% endif %}</span></div></h4>
+                      <h4 class="event-title"><span>{% if event.telecon == true %}<span class="special telecon">Telecon</span>{% endif %}{% if event.type == "keynote" %}<span class="special keynote">Keynote</span>{% elsif event.type == "workshop" %}<span class="special workshop">Workshop</span>{% endif %}</span><div style="{% if event.type == "break" or event.type == "lunch" %}color:orange;{% endif %}">{% if event.type == "break" %}<i class="fa fa-coffee" style="margin-right: 4px;"></i>{% elsif event.type == "lunch" %}<i class="fa fa-cutlery" style="margin-right: 4px;"></i>{% endif %}<span style="font-weight: 700;">{{ event.title }}</span>{% if event.presenter %}<span> by {{ event.presenter }}{% endif %}</span><i class="fa fa-caret-square-o-down" style="float:right;"></i></div></h4>
                       <div>
                         {% if event.location %}<span style="font-weight:700;">Location:</span><span> {{ event.location }}</span>{% endif %}
                         {{ event.content }}

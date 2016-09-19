@@ -84,15 +84,20 @@ geonode_summit_2016:
     - id: monday
       title: Monday, November 28
       location: FAO
+      theme: Community Development
     - id: tuesday
       title: Tuesday, November 29
       location: FAO
+      theme: Workshops Day
     - id: wednesday
       title: Wednesday, November 30
       location: WFP
+      theme: Presentations Day
     - id: thursday
       title: Thursday, December 1
       location: WFP
+      theme: Roadmapping Day
     - id: friday
       title: Friday, December 2
       location: FAO
+      theme: Show me the money!

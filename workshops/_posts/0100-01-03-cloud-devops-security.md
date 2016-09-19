@@ -8,9 +8,10 @@ keywords:
   - Docker
   - CF
   - Boundless Exchange
-#image: 
+#image:
 ---
-Ansible, Chef, Docker, CF, Boundless Exchange,
+
+Ansible, Chef, Docker, CF, Boundless Exchange, etc.
 
 ### Insights into Docker use for development by `Francesco Bartoli`
 
