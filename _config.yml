@@ -32,8 +32,8 @@ copyright: ""
 
 # Analytics
 ga:
-  enabled: false
-  code: "UA-XXXXXX-1"
+  enabled: true
+  code: "UA-38570723-1"
 
 # Twitter
 twittercard:
