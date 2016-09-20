@@ -22,10 +22,10 @@ map:
     - name: fontFamily
       value: "Source Sans Pro"
   markerIcons:
-    train_station: "\uf238"
-    metro_station: "\uf239"
-    building: "\uf1ad"
-    airport: "\uf072"
+    train_station: "f238"
+    metro_station: "f239"
+    building: "f1ad"
+    airport: "f072"
   features:
     - title: World Food Programme (WFP)\nHeadquarters
       type: building

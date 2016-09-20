@@ -12,7 +12,15 @@
 
     var getMarkerText = function(type)
 		{
-			return markerIcons[type] || "";
+			var h = markerIcons[type];
+			if(h != undefined)
+			{
+				return String.fromCharCode(parseInt(h, 16));
+			}
+			else
+			{
+			  return "";
+			}
 		};
 
 {% for f in page.map.features %}
@@ -130,7 +138,7 @@
 						var description = feature.get("description");
 						lines.push(description);
 					}
-					
+
           var coordinates = feature.getGeometry().getCoordinates();
           popup.setPosition(coordinates);
 
