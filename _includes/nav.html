@@ -5,13 +5,13 @@
 			<ul>
 			  {% assign current = page.url | downcase | split: '/' %}
 				<li><a href="{{ site.baseurl }}/">Home</a></li>
-				{% include nav_about.html %}
-				{% include nav_logistics.html %}
-				{% include nav_schedule.html %}
-        {% include nav_workshops.html %}
+				{% include nav/about.html %}
+				{% include nav/logistics.html %}
+				{% include nav/schedule.html %}
+        {% include nav/workshops.html %}
 				<li><a href="{{ site.baseurl }}/speakers" >Speakers</a></li>
-				{% include nav_afterhours.html %}
-				{% include nav_twitter.html %}
+				{% include nav/afterhours.html %}
+				{% include nav/twitter.html %}
 			</ul>
 		</nav>
 	</div>

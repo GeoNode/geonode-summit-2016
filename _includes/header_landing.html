@@ -149,21 +149,22 @@
 		  <nav id="nav">
 			<ul>
 				<li class="current"><a href="{{ site.baseurl }}/">Home</a></li>
-				{% include nav_about.html %}
-				{% include nav_logistics.html %}
-	      {% include nav_schedule.html %}
-				{% include nav_workshops.html %}
+				{% include nav/about.html %}
+				{% include nav/logistics.html %}
+	      {% include nav/schedule.html %}
+				{% include nav/workshops.html %}
 	      <li><a href="{{ site.baseurl }}/speakers" >Speakers</a></li>
-	      {% include nav_afterhours.html %}
-				{% include nav_twitter.html %}
+	      {% include nav/afterhours.html %}
+				{% include nav/twitter.html %}
 			</ul>
 		</nav>
 		<header>
 			<p style="font-weight: 400; font-size: 20px;">November 28<sup>th</sup>‒ December 2<sup>nd</sup>, 2016, Rome, Italy</p>
 			<h1>GeoNode Summit 2016</h1>
-			<p class="quiet" style="font-size:20px">Join the growing opensource GIS commmunity for GeoNode Summit 2016 from November 28, 2016 to December 2, 2016 in beautiful Rome, Italy.  The Summit is kindly hosted by the WFP Headquarters GIS Unit.  All are welcome to attend.  The schedule includes workshops for those new to GeoNode!</p>
+			<p class="quiet" style="font-size:20px">Join the growing opensource GIS commmunity for GeoNode Summit 2016 from November 28, 2016 to December 2, 2016 in beautiful Rome, Italy.  All are welcome to attend; whether you are new to opensource GIS or a GeoNode expert.  Workshops will provide a collaborative space to learn new technologies and workflows.  The Summit is kindly hosted by the WFP Headquarters GIS Unit.</p>
 			<a target="_blank" href="{{ site.geonode_summit_2016.link.rsvp }}" class="button">RSVP</a>
 			<a href="{{ site.baseurl }}/logistics" class="button">Logistics, Hotels, etc.</a>
+			<a href="{{ site.baseurl }}/about" class="button">What is GeoNode?</a>
 	    <div class="attribution-block">Attribution placeholder</div>
 		</header>
 		</section>
