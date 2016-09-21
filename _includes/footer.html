@@ -11,7 +11,7 @@
 					{% for highlight in sorted_pages offset: 0 limit: 5 %}
 						<li>
 							<span class="date">{{ highlight.date | date: "%B"}} <strong>{{ highlight.date | date: "%d"}}</strong></span>
-							<h3><a href="{{ site.baseurl }}{{ highlight.url }}">{{ highlight.title }}</a></h3>
+							<h3><a href="{{ site.baseurl }}{{ highlight.link }}">{{ highlight.title }}</a></h3>
 							{{ highlight.excerpt }}
 						</li>
 					{% endfor %}

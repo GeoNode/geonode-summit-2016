@@ -73,20 +73,51 @@ tr {
 
   });
 </script>
+
+<style>
+  .schedule-day-header {
+    padding: 0;
+  }
+  .schedule-day-header .schedule-day-link i{
+     color: white;
+  }
+
+  .schedule-day-header:hover .schedule-day-link i {
+    color: black;
+  }
+
+  .schedule-day-title.gray span, .schedule-day-title.gray i {
+    color: #AAA;
+  }
+
+
+</style>
 <body class="no-sidebar">
 	{% include nav.html %}
 	<div id="main-wrapper">
 		<div class="container">
 				<article class="box post">
-					<h3>All events will take place in Rome, Italy either at the Food And Agriculture Organiation (FAO) or the World Food Programme (WFP).  For a map of key locations, please take a look at the <a href="{{ site.baseurl }}/logistics#map">Logistics map</a>.</h3>
+					<h4>Main presentations begin Wednesday morning.  On Tuesday, workshops will be held to focus learning and discussion around specific topics.  All events will take place in Rome, Italy either at the Food and Agriculture Organiation (FAO) or the World Food Programme (WFP).  For a map of key locations, please take a look at the <a href="{{ site.baseurl }}/logistics#map">Logistics map</a>.</h4>
           <br>
           {% for day in site.geonode_summit_2016.schedule %}
           <section>
-            <header>
-              <h2 id="{{ day.id }}"><a href="#{{ day.id }}">{{ day.title }} [ {{ day.theme }} ]</a></h2>
-              <h3 id="{{ day.id }}-location">At {{ day.location }}</h3>
+            <header class="schedule-day-header">
+              <h2 id="{{ day.id }}">
+                <a
+                  id="{{ day.id }}-link"
+                  class="schedule-day-link"
+                  href="#{{ day.id }}"><i class="fa fa-paragraph"></i></a>
+                <a
+                  class="schedule-day-title {{ day.color }}"
+                  data-toggle="collapse"
+                  data-target="#event-wrapper-{{ day.id }}, #{{ day.id }}-location"
+                  style="cursor:pointer;">
+                  <span >{{ day.title }} : {{ day.theme }}</span><i class="fa fa-caret-square-o-down" style="float:right;"></i>
+                </a>
+              </h2>
+              <h3 id="{{ day.id }}-location" aria-expanded="{% if day.collapsed == "true" %}false{% else %}true{% endif %}" class="collapse{% if day.collapsed == "true" %}{% else %} in{% endif %}" style="margin-left: 60px;{% if day.collapsed == "true" %}height:0px;{% endif %}">At {{ day.location }}</h3>
             </header>
-            <p>
+            <p id="event-wrapper-{{ day.id }}" aria-expanded="{% if day.collapsed == "true" %}false{% else %}true{% endif %}" class="collapse{% if day.collapsed == "true" %}{% else %} in{% endif %}"{% if day.collapsed == "true" %} style="height:0px;"{% endif %}>
               <table class="accordion" border="0">
                 {% for event in site.categories.schedule reversed %}
                 {% if day.id == event.day %}

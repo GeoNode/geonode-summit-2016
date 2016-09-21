@@ -83,21 +83,28 @@ geonode_summit_2016:
   schedule:
     - id: monday
       title: Monday, November 28
-      location: FAO
-      theme: Community Development
+      location: Food and Agriculture Organization (FAO)
+      theme: Pre-Conference Triage
+      collapsed: "true"
+      color: "gray"
     - id: tuesday
       title: Tuesday, November 29
-      location: FAO
+      location: Food and Agriculture Organization (FAO)
       theme: Workshops Day
+      color: "default"
     - id: wednesday
       title: Wednesday, November 30
-      location: WFP
+      location: World Food Programme (WFP)
       theme: Presentations Day
+      color: "default"
     - id: thursday
       title: Thursday, December 1
-      location: WFP
+      location: World Food Programme (WFP)
       theme: Roadmapping Day
+      color: "default"
     - id: friday
       title: Friday, December 2
-      location: FAO
-      theme: Show me the money!
+      location: Food and Agriculture Organization (FAO)
+      theme: Prioritization
+      collapsed: "true"
+      color: "gray"
