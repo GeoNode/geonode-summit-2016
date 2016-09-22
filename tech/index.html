@@ -1,0 +1,33 @@
+---
+title: GeoNode Technology
+layout: base
+---
+<body class="left-sidebar">
+  {% include nav.html %}
+	<div id="main-wrapper">
+	  <div class="container">
+      {% for g in site.geonode_summit_2016.tech %}
+      <div><header class="major"><h2>{{ g.title }}</h2></header></div>
+		  <div class="row speakers">
+        {% for x in site.categories.tech reversed %}{% if x.group == g.id %}
+			  <div class="3u speaker">
+					<section class="box">
+						<div>
+							<h3 id="speaker-{{ speaker.name | slugify }}">{{ x.name }}</h3>
+							{{ x.content }}
+							<div class="handles">
+                {% if x.website %}<div class="handle"><i class="fa fa-external-link"></i><a target="_blank" href="{{ x.website }}">{{ x.website }}</a></div>{% endif %}
+                {% for handle in x.handles %}
+                <div class="handle"><i class="{{ site.handles[handle.type].class }}"></i><a target="_blank" href="{{ site.handles[handle.type].baseurl }}{{ handle.name }}">{{ handle.name }}</a></div>
+                {% endfor %}
+              </div>
+						</div>
+					</section>
+				</div>
+        {% endif %}{% endfor %}
+			</div>
+      <br>
+      {% endfor %}
+    </div>
+  </div>
+</body>

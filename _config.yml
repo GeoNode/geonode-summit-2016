@@ -59,6 +59,14 @@ deps:
 storage:
   bio_pics: "/assets/img/bios"
 
+handles:
+  twitter:
+    class: fa fa-twitter
+    baseurl: https://twitter.com/
+  github:
+    class: fa fa-github
+    baseurl: https://github.com/
+
 # GeoNode Summit
 geonode_summit_2016:
   link:
@@ -108,3 +116,8 @@ geonode_summit_2016:
       theme: Prioritization
       collapsed: "true"
       color: "gray"
+  tech:
+    - id: core
+      title: Core Technology Under the Hood
+    - id: development
+      title: Under Development

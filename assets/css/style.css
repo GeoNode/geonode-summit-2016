@@ -850,3 +850,41 @@
 			border-radius: 5px;
 			margin: 0;
 		}
+
+
+#intro a, #intro a section, #intro section i.icon.featured, #intro section p, #intro section img {
+	cursor: pointer;
+	user-select: none;
+}
+
+#intro a section:hover {
+	background: #CCC;
+	border-radius: 10px;
+}
+
+#intro a {
+	text-decoration: none;
+}
+
+
+.speakers .speaker a
+{
+	text-decoration: none;
+}
+
+.speakers .speaker a:hover
+{
+	text-decoration: underline;
+}
+
+.speakers .speaker .handles {
+	font-size: 18px;
+}
+
+.speakers .speaker .handles .handle i.fa {
+	margin: 4px;
+}
+
+.speakers .speaker .handles .handle a {
+	font-size: 18px;
+}

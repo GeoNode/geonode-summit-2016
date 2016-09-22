@@ -4,27 +4,27 @@ layout: base
 ---
 <body class="left-sidebar">
   {% include nav.html %}
-	<!-- Main -->
 	<div id="main-wrapper">
 	  <div class="container">
-		  <div class="row">
-			  <div class="8u -2u skel-cell-important">
-				  <!-- Content -->
-					<article class="box post">
-						<div id="summary-text">
-							<h2>Speaker Bios</h2>
-							<br>
-							<div style="text-align:left;margin-left:50px;margin-right:50px">
-							{% for speaker in site.categories.speakers %}
-							<h3 id='{{ speaker.name | slugify }}'>{{ speaker.name }}</h3>
+      <div><header class="major"><h2>{{ page.title }}</h2></header></div>
+		  <div class="row speakers">
+        {% for speaker in site.categories.speakers %}
+			  <div class="4u speaker">
+					<section class="box">
+						<div>
+							<h3 id="speaker-{{ speaker.name | slugify }}">{{ speaker.name }}</h3>
+              <h4 style="font-style: italic;">{{ speaker.organization }}</h4>
 							{{ speaker.content }}
-							<p><p>
-							{% endfor %}
-							</div>
+							<div class="handles">
+                {% for handle in speaker.handles %}
+                <div class="handle"><i class="{{ site.handles[handle.type].class }}"></i><a target="_blank" href="{{ site.handles[handle.type].baseurl }}{{ handle.name }}">{{ handle.name }}</a></div>
+                {% endfor %}
+              </div>
 						</div>
-						</article>
-					</div>
+					</section>
 				</div>
+        {% endfor %}
 			</div>
+    </div>
   </div>
 </body>

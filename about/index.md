@@ -13,7 +13,9 @@ Whether your use case is wrangling thousands of layers or managing just 10 reall
 
 ### Open Source
 
-GeoNode was created in 2009 and is developed in the open by a global community of developers.  The platform is built on a fully opensource stack, including the widely used [PostgreSQL/PostGIS](http://postgis.net/) and [GeoServer](http://geoserver.org/).  GeoNode is integrating the latest advances in opensource GIS software, including [OpenLayers 3](http://openlayers.org/), [Tegola](http://tegola.io/), and many more.  The user interface is built on the [Django Framework](https://www.djangoproject.com/).
+GeoNode was created in 2009 and is developed in the open by a global community of developers.  The platform is built on a [fully opensource stack]({{ site.baseurl }}/tech), including the widely used [PostgreSQL/PostGIS](http://postgis.net/) and [GeoServer](http://geoserver.org/).  GeoNode is integrating the latest advances in opensource GIS software, including [OpenLayers 3](http://openlayers.org/), [Tegola](http://tegola.io/), and many more.  The user interface is built on the [Django Framework](https://www.djangoproject.com/).
+
+[Learn more about the stack!]({{ site.baseurl }}/tech)
 
 ### What is a GeoNode Summit?
 
