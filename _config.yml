@@ -66,6 +66,9 @@ handles:
   github:
     class: fa fa-github
     baseurl: https://github.com/
+  linkedin:
+    class: fa fa-linkedin
+    baseurl: https://www.linkedin.com/in/
 
 # GeoNode Summit
 geonode_summit_2016:
