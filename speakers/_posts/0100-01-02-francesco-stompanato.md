@@ -3,7 +3,7 @@ layout: single
 category: speakers
 name: "Francesco Stompanato"
 organization: World Food Programme (WFP)
-handle:
+handles:
   - type: linkedin
     name: francesco-stompanato-09042921
 ---
