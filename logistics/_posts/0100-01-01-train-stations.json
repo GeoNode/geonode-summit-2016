@@ -1,0 +1,18 @@
+---
+title: Train Stations
+layout: layer
+category: logistics
+features:
+  - title: Muratella Train Station
+    type: "train_station"
+    lonlat: [12.40876, 41.82478]
+    description: "The closest train station to WFP.  Use this train station if you are using public transit to get to WFP."
+  - title: Roma Termini Train Station
+    type: train_station
+    lonlat: [12.50264, 41.90062]
+    description: "The main train station in Rome."
+  - title: Roma Trastevere Train Station
+    type: train_station
+    lonlat: [12.4657, 41.8723]
+    description: "You can take a train to WFP from here (via Muratella train station).  Train arrives on platform 5 (in italian Binario 5) toward Fiumicino Airport."
+---
