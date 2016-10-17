@@ -43,18 +43,13 @@ featurelayers:
           tab:
             label: "Overview"
           fields:
-            - value: "{{ feature.attributes.description }}"
-              label: ""
-            - attribute: locprecision
-              label: Location Precision
-            - attribute: latitude
-              label: Latitude
-            - attribute: longitude
-              label: Longitude
-            - value: "{{ feature.geometry.lat | number : 4 }}, {{ feature.geometry.lng | number : 4 }}"
-              type: link
+            - { label: "", value: "{{ feature.attributes.description }}" }
+            - { label: Latitude, value: "{{ feature.geometry.lat | number : 4 }}" }
+            - { label: Longitude, value: "{{ feature.geometry.lon | number : 4 }}" }
+            - type: link
               label: "OpenStreetMap"
-              url: "https://www.openstreetmap.org/#map=15/{{ feature.geometry.lat }}/{{ feature.geometry.lng }}"
+              value: "{{ feature.geometry.lat | number : 4 }}, {{ feature.geometry.lon | number : 4 }}"
+              url: "https://www.openstreetmap.org/#map=15/{{ feature.geometry.lat | number : 4 }}/{{ feature.geometry.lon | number : 4 }}"
     carto:
       styles:
         - id: default
@@ -91,18 +86,13 @@ featurelayers:
           tab:
             label: "Overview"
           fields:
-            - value: "{{ feature.attributes.description }}"
-              label: ""
-            - attribute: locprecision
-              label: Location Precision
-            - attribute: latitude
-              label: Latitude
-            - attribute: longitude
-              label: Longitude
-            - value: "{{ feature.geometry.lat | number : 4 }}, {{ feature.geometry.lng | number : 4 }}"
-              type: link
+            - { label: "", value: "{{ feature.attributes.description }}" }
+            - { label: Latitude, value: "{{ feature.geometry.lat | number : 4 }}" }
+            - { label: Longitude, value: "{{ feature.geometry.lon | number : 4 }}" }
+            - type: link
               label: "OpenStreetMap"
-              url: "https://www.openstreetmap.org/#map=15/{{ feature.geometry.lat }}/{{ feature.geometry.lng }}"
+              value: "{{ feature.geometry.lat | number : 4 }}, {{ feature.geometry.lon | number : 4 }}"
+              url: "https://www.openstreetmap.org/#map=15/{{ feature.geometry.lat | number : 4 }}/{{ feature.geometry.lon | number : 4 }}"
     carto:
       styles:
         - id: default
