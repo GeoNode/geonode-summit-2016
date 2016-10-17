@@ -1,4 +1,5 @@
 ---
+{% raw %}
 title: GeoNode Summit 2016 Logistics
 view:
   baselayer: osm
@@ -297,3 +298,4 @@ legend:
       value: 20px
     - name: color
       value: black
+{% endraw %}
