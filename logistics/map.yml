@@ -348,7 +348,11 @@ overlays:
   - id: toggle_airports
     type: text
     title: "Toggle Airports"
-    position: { top: calc(1rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px), left: 8px, bottom: auto, right: auto }
+    position:
+      top: calc(1rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px)
+      left: 8px
+      bottom: auto
+      right: auto
     text:
       content: ""
       font: { family: FontAwesome, size: 2rem }
