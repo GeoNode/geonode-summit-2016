@@ -71,7 +71,7 @@ featurelayers:
                   fillColor: "rgba(0, 0, 256, 0.5)"
                   strokeColor: "rgba(256, 256, 256, 0.8)"
                   strokeWidth: 1
-                  textCode: "f238"
+                  textCode: "f19c"
                   textFont: "normal 20px FontAwesome"
                   textAlign:  "center"
                   textBaseline: "middle"
@@ -312,13 +312,14 @@ overlays:
     title: "Toggle Buildings"
     position: { top: calc(8px + 10px + 2rem + 10px + 8px + 10px + 2rem + 10px + 8px + 10px + 2rem + 10px), left: 8px, bottom: auto, right: auto }
     text:
-      content: ""
+      content: ""
       font:
         family: FontAwesome
         size: 2rem
-    link:
-      url: "http://github.com/geonode/geonode-summit-2016/issues"
-      target: "_blank"
+    intent:
+      name: toggleLayer
+      properties:
+        - { name: layer, value: buildings }
     tooltip: { placement: right, content: "Submit an Issue" }
     css:
       properties:
