@@ -70,11 +70,61 @@ featurelayers:
                 properties:
                   fillColor: "rgba(0, 0, 256, 0.5)"
                   strokeColor: "rgba(256, 256, 256, 0.8)"
+                  strokeWidth: 1
                   textCode: "f238"
                   textFont: "normal 20px FontAwesome"
                   textAlign:  "center"
                   textBaseline: "middle"
                   textColor: "white"
+                  radius: 18
+  - id: metro_stations
+    type: GeoJSON
+    title: "Metro Stations"
+    description: "Key metro stations in Rome"
+    geojson:
+      url: "http://summit.geonode.org/logistics/metro-stations.json"
+    popup:
+      title: "{{ feature.attributes.title }}"
+      maxWidth: 550
+      panes:
+        - id: "popup_overview"
+          tab:
+            label: "Overview"
+          fields:
+            - value: "{{ feature.attributes.description }}"
+              label: ""
+            - attribute: locprecision
+              label: Location Precision
+            - attribute: latitude
+              label: Latitude
+            - attribute: longitude
+              label: Longitude
+            - value: "{{ feature.geometry.lat | number : 4 }}, {{ feature.geometry.lng | number : 4 }}"
+              type: link
+              label: "OpenStreetMap"
+              url: "https://www.openstreetmap.org/#map=15/{{ feature.geometry.lat }}/{{ feature.geometry.lng }}"
+    carto:
+      styles:
+        - id: default
+          title: default
+          description: "Default style"
+          legend: { type: marker }
+          symbolizers:
+            - id: default
+              title: Default
+              description: "Default symbolizer"
+              type: point
+              static:
+                properties:
+                  fillColor: "rgba(0, 0, 256, 0.5)"
+                  strokeColor: "rgba(256, 256, 256, 0.8)"
+                  strokeWidth: 1
+                  textCode: "f239"
+                  textFont: "normal 20px FontAwesome"
+                  textAlign:  "center"
+                  textBaseline: "middle"
+                  textColor: "white"
+                  radius: 18
 overlays:
   - id: attribution
     type: text
