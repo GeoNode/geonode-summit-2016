@@ -214,10 +214,7 @@ overlays:
       right: 8px
     text:
       content: "&copy; [OpenStreetMap](http://www.openstreetmap.org/copyright)"
-      font:
-        style: normal
-        family: Verdana
-        size: 2rem
+      font: { style: normal, family: Verdana, size: 2rem }
     css:
       properties:
         - { name: padding, value: 8px }
@@ -233,13 +230,8 @@ overlays:
       left: 8px
     text:
       content: "Powered by GeoDash"
-      font:
-        style: normal
-        family: Verdana
-        size: 2rem
-    link:
-      url: "http://geodash.io"
-      target: "_blank"
+      font: { style: normal, family: Verdana, size: 2rem }
+    link: { url: "http://geodash.io", target: "_blank" }
     css:
       properties:
         - { name: padding, value: 8px }
@@ -270,7 +262,7 @@ overlays:
   - id: zoom_out
     type: text
     title: "Zoom Out"
-    position: { top: calc(8px + 10px + 2rem + 10px), left: 8px, bottom: auto, right: auto }
+    position: { top: calc(1rem + 10px + 2rem + 10px), left: 8px, bottom: auto, right: auto }
     text:
       content: ""
       font:
@@ -289,12 +281,10 @@ overlays:
   - id: reset_extent
     type: text
     title: "Reset Extent"
-    position: { top: calc(8px + 10px + 2rem + 10px + 8px + 10px + 2rem + 10px), left: 8px, bottom: auto, right: auto }
+    position: { top: calc(1rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px), left: 8px, bottom: auto, right: auto }
     text:
       content: ""
-      font:
-        family: FontAwesome
-        size: 2rem
+      font: { family: FontAwesome, size: 2rem }
     intent:
       name: zoomToLayer
       properties:
@@ -310,17 +300,15 @@ overlays:
   - id: toggle_buildings
     type: text
     title: "Toggle Buildings"
-    position: { top: calc(8px + 10px + 2rem + 10px + 8px + 10px + 2rem + 10px + 8px + 10px + 2rem + 10px), left: 8px, bottom: auto, right: auto }
+    position: { top: calc(1rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px), left: 8px, bottom: auto, right: auto }
     text:
       content: ""
-      font:
-        family: FontAwesome
-        size: 2rem
+      font: { family: FontAwesome, size: 2rem }
     intent:
-      name: toggleLayer
+      name: toggleFeatureLayer
       properties:
         - { name: layer, value: buildings }
-    tooltip: { placement: right, content: "Submit an Issue" }
+    tooltip: { placement: right, content: "Toggle Buildings" }
     css:
       properties:
         - { name: padding, value: 8px }
@@ -331,12 +319,10 @@ overlays:
   - id: toggle_fullscreen
     type: text
     title: "Toggle Full Screen"
-    position: { top: 8px, left: auto, bottom: auto, right: 8px }
+    position: { top: 1rem, left: auto, bottom: auto, right: 1rem }
     text:
       content: ""
-      font:
-        family: FontAwesome
-        size: 2rem
+      font: { family: FontAwesome, size: 2rem }
     intent: { name: toggleFullScreen }
     tooltip: { placement: left, content: "Toggle Full Screen" }
     css:
@@ -349,15 +335,13 @@ overlays:
   - id: print_map
     type: text
     title: "Print Map"
-    position: { top: calc(8px + 10px + 2rem + 10px), right: 8px, bottom: auto, left: auto }
+    position: { top: calc(1rem + 10px + 2rem + 10px + 0.5rem), right: 1rem, bottom: auto, left: auto }
     text:
       content: ""
-      font:
-        family: FontAwesome
-        size: 2rem
+      font: { family: FontAwesome, size: 2rem }
     intent:
       name: printMap
-    tooltip: { placement: right, content: "Print Map" }
+    tooltip: { placement: left, content: "Print Map" }
     css:
       properties:
         - { name: padding, value: 8px }
@@ -368,16 +352,12 @@ overlays:
   - id: submit_issue
     type: text
     title: "Submit Issue"
-    position: { top: calc(8px + 10px + 2rem + 10px + 8px + 10px + 2rem + 10px), right: 8px, bottom: auto, left: auto }
+    position: { top: calc(1rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem), right: 1rem, bottom: auto, left: auto }
     text:
       content: ""
-      font:
-        family: FontAwesome
-        size: 2rem
-    link:
-      url: "http://github.com/geonode/geonode-summit-2016/issues"
-      target: "_blank"
-    tooltip: { placement: right, content: "Submit an Issue" }
+      font: { family: FontAwesome, size: 2rem }
+    link: { url: "http://github.com/geonode/geonode-summit-2016/issues", target: "_blank" }
+    tooltip: { placement: left, content: "Submit an Issue" }
     css:
       properties:
         - { name: padding, value: 8px }
