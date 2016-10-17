@@ -304,10 +304,39 @@ overlays:
     text:
       content: ""
       font: { family: FontAwesome, size: 2rem }
-    intent:
-      name: toggleFeatureLayer
+    intent: { name: toggleFeatureLayer, properties: [{ name: layer, value: buildings }] }
+    tooltip: { placement: right, content: "Toggle Buildings" }
+    css:
       properties:
-        - { name: layer, value: buildings }
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0,0,0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 2rem }
+  - id: toggle_train_stations
+    type: text
+    title: "Toggle Train Stations"
+    position: { top: calc(1rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px), left: 8px, bottom: auto, right: auto }
+    text:
+      content: ""
+      font: { family: FontAwesome, size: 2rem }
+    intent: { name: toggleFeatureLayer, properties: [{ name: layer, value: train_stations }] }
+    tooltip: { placement: right, content: "Toggle Buildings" }
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0,0,0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 2rem }
+  - id: toggle_metro_stations
+    type: text
+    title: "Toggle Metro Stations"
+    position: { top: calc(1rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px), left: 8px, bottom: auto, right: auto }
+    text:
+      content: ""
+      font: { family: FontAwesome, size: 2rem }
+    intent: { name: toggleFeatureLayer, properties: [{ name: layer, value: metro_stations }] }
     tooltip: { placement: right, content: "Toggle Buildings" }
     css:
       properties:
