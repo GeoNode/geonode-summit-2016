@@ -4,6 +4,7 @@ title: GeoNode Summit 2016 Logistics
 view:
   baselayer: osm
   featurelayers:
+    - buildings
     - train_stations
     - metro_stations
   latitude: 41.8667
@@ -16,6 +17,7 @@ controls:
   legend: false
   zoom: false
 renderlayers:
+  - buildings
   - train_station
   - metro_station
   - osm
@@ -30,6 +32,49 @@ baselayers:
         url: https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png
       type: tiles
 featurelayers:
+  - id: buildings
+    type: GeoJSON
+    title: "Buildings"
+    description: "Key buildings in Rome"
+    geojson:
+      url: "http://summit.geonode.org/logistics/buildings.json"
+    popup:
+      title: "{{ feature.attributes.title }}"
+      css:
+        properties:
+          - { name: max-width, value: 550px }
+          - { name: min-width, value: 220px }
+      panes:
+        - id: "popup_overview"
+          tab:
+            label: "Overview"
+          fields:
+            - { label: "", value: "{{ feature.attributes.description }}" }
+            - type: link
+              value: "OpenStreetMap"
+              url: "https://www.openstreetmap.org/#map=15/{{ feature.geometry.lat | number : 4 }}/{{ feature.geometry.lon | number : 4 }}"
+    carto:
+      styles:
+        - id: default
+          title: default
+          description: "Default style"
+          legend: { type: marker }
+          symbolizers:
+            - id: default
+              title: Default
+              description: "Default symbolizer"
+              type: point
+              static:
+                properties:
+                  fillColor: "rgba(0, 0, 256, 0.5)"
+                  strokeColor: "rgba(256, 256, 256, 0.8)"
+                  strokeWidth: 1
+                  textCode: "f238"
+                  textFont: "normal 20px FontAwesome"
+                  textAlign:  "center"
+                  textBaseline: "middle"
+                  textColor: "white"
+                  radius: 18
   - id: train_stations
     type: GeoJSON
     title: "Train Stations"
@@ -38,18 +83,18 @@ featurelayers:
       url: "http://summit.geonode.org/logistics/train-stations.json"
     popup:
       title: "{{ feature.attributes.title }}"
-      maxWidth: 550
+      css:
+        properties:
+          - { name: max-width, value: 550px }
+          - { name: min-width, value: 220px }
       panes:
         - id: "popup_overview"
           tab:
             label: "Overview"
           fields:
             - { label: "", value: "{{ feature.attributes.description }}" }
-            - { label: Latitude, value: "{{ feature.geometry.lat | number : 4 }}" }
-            - { label: Longitude, value: "{{ feature.geometry.lon | number : 4 }}" }
             - type: link
-              label: "OpenStreetMap"
-              value: "{{ feature.geometry.lat | number : 4 }}, {{ feature.geometry.lon | number : 4 }}"
+              value: "OpenStreetMap"
               url: "https://www.openstreetmap.org/#map=15/{{ feature.geometry.lat | number : 4 }}/{{ feature.geometry.lon | number : 4 }}"
     carto:
       styles:
@@ -81,18 +126,18 @@ featurelayers:
       url: "http://summit.geonode.org/logistics/metro-stations.json"
     popup:
       title: "{{ feature.attributes.title }}"
-      maxWidth: 550
+      css:
+        properties:
+          - { name: max-width, value: 550px }
+          - { name: min-width, value: 220px }
       panes:
         - id: "popup_overview"
           tab:
             label: "Overview"
           fields:
             - { label: "", value: "{{ feature.attributes.description }}" }
-            - { label: Latitude, value: "{{ feature.geometry.lat | number : 4 }}" }
-            - { label: Longitude, value: "{{ feature.geometry.lon | number : 4 }}" }
             - type: link
-              label: "OpenStreetMap"
-              value: "{{ feature.geometry.lat | number : 4 }}, {{ feature.geometry.lon | number : 4 }}"
+              value: "OpenStreetMap"
               url: "https://www.openstreetmap.org/#map=15/{{ feature.geometry.lat | number : 4 }}/{{ feature.geometry.lon | number : 4 }}"
     carto:
       styles:
@@ -127,14 +172,14 @@ overlays:
       font:
         style: normal
         family: Verdana
-        size: 1.2rem
+        size: 1.5rem
     css:
       properties:
         - { name: padding, value: 8px }
         - { name: background, value: "rgba(0, 0, 0, 0.4)" }
         - { name: border, value: "2px solid #0374e6" }
         - { name: border-radius, value: 8px }
-        - { name: line-height, value: 1.2rem }
+        - { name: line-height, value: 1.5rem }
         - { name: color, value: white }
   - id: powered_by_geodash
     type: text
@@ -146,7 +191,7 @@ overlays:
       font:
         style: normal
         family: Verdana
-        size: 1.2rem
+        size: 1.5rem
     link:
       url: "http://geodash.io"
       target: "_blank"
@@ -156,7 +201,7 @@ overlays:
         - { name: background, value: "rgba(0, 0, 0, 0.4)" }
         - { name: border, value: "2px solid #0374e6" }
         - { name: border-radius, value: 8px }
-        - { name: line-height, value: 1.2rem }
+        - { name: line-height, value: 1.5rem }
         - { name: color, value: white }
   - id: zoom_in
     type: text
@@ -166,7 +211,7 @@ overlays:
       content: ""
       font:
         family: FontAwesome
-        size: 1.2rem
+        size: 1.5rem
     intent:
       name: zoomIn
     tooltip: { placement: right, content: "Zoom In" }
@@ -176,16 +221,16 @@ overlays:
         - { name: background, value: "rgba(0,0,0, 0.4)" }
         - { name: border, value: "2px solid #0374e6" }
         - { name: border-radius, value: "8px 8px 0px 0px" }
-        - { name: line-height, value: 1.2rem }
+        - { name: line-height, value: 1.5rem }
   - id: zoom_out
     type: text
     title: "Zoom Out"
-    position: { top: calc(8px + 10px + 1.2rem + 10px), left: 8px, bottom: auto, right: auto }
+    position: { top: calc(8px + 10px + 1.5rem + 10px), left: 8px, bottom: auto, right: auto }
     text:
       content: ""
       font:
         family: FontAwesome
-        size: 1.2rem
+        size: 1.5rem
     intent:
       name: zoomOut
     tooltip: { placement: right, content: "Zoom Out" }
@@ -195,16 +240,16 @@ overlays:
         - { name: background, value: "rgba(0,0,0, 0.4)" }
         - { name: border, value: "2px solid #0374e6" }
         - { name: border-radius, value: "0px 0px 8px 8px" }
-        - { name: line-height, value: 1.2rem }
+        - { name: line-height, value: 1.5rem }
   - id: reset_extent
     type: text
     title: "Reset Extent"
-    position: { top: calc(8px + 10px + 1.2rem + 10px + 8px + 10px + 1.2rem + 10px), left: 8px, bottom: auto, right: auto }
+    position: { top: calc(8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px), left: 8px, bottom: auto, right: auto }
     text:
       content: ""
       font:
         family: FontAwesome
-        size: 1.2rem
+        size: 1.5rem
     intent:
       name: zoomToLayer
       properties:
@@ -220,12 +265,12 @@ overlays:
   - id: toggle_fullscreen
     type: text
     title: "Toggle Full Screen"
-    position: { top: calc(8px + 10px + 1.2rem + 10px + 8px + 10px + 1.2rem + 10px + 8px + 10px + 1.2rem + 10px), left: 8px, bottom: auto, right: auto }
+    position: { top: calc(8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px), left: 8px, bottom: auto, right: auto }
     text:
       content: ""
       font:
         family: FontAwesome
-        size: 1.2rem
+        size: 1.5rem
     intent: { name: toggleFullScreen }
     tooltip: { placement: right, content: "Toggle Full Screen" }
     css:
@@ -234,16 +279,16 @@ overlays:
         - { name: background, value: "rgba(0,0,0, 0.4)" }
         - { name: border, value: "2px solid #0374e6" }
         - { name: border-radius, value: 8px }
-        - { name: line-height, value: 1.2rem }
+        - { name: line-height, value: 1.5rem }
   - id: print_map
     type: text
     title: "Print Map"
-    position: { top: calc(8px + 10px + 1.2rem + 10px + 8px + 10px + 1.2rem + 10px + 8px + 10px + 1.2rem + 10px + 8px + 10px + 1.2rem + 10px), left: 8px, bottom: auto, right: auto }
+    position: { top: calc(8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px), left: 8px, bottom: auto, right: auto }
     text:
       content: ""
       font:
         family: FontAwesome
-        size: 1.2rem
+        size: 1.5rem
     intent:
       name: printMap
     tooltip: { placement: right, content: "Print Map" }
@@ -253,16 +298,16 @@ overlays:
         - { name: background, value: "rgba(0,0,0, 0.4)" }
         - { name: border, value: "2px solid #0374e6" }
         - { name: border-radius, value: 8px }
-        - { name: line-height, value: 1.2rem }
+        - { name: line-height, value: 1.5rem }
   - id: submit_issue
     type: text
     title: "Submit Issue"
-    position: { top: calc(8px + 10px + 1.2rem + 10px + 8px + 10px + 1.2rem + 10px + 8px + 10px + 1.2rem + 10px + 8px + 10px + 1.2rem + 10px + 8px + 10px + 1.2rem + 10px), left: 8px, bottom: auto, right: auto }
+    position: { top: calc(8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px + 8px + 10px + 1.5rem + 10px), left: 8px, bottom: auto, right: auto }
     text:
       content: ""
       font:
         family: FontAwesome
-        size: 1.2rem
+        size: 1.5rem
     link:
       url: "http://github.com/geonode/geonode-summit-2016/issues"
       target: "_blank"
@@ -273,7 +318,7 @@ overlays:
         - { name: background, value: "rgba(0,0,0, 0.4)" }
         - { name: border, value: "2px solid #0374e6" }
         - { name: border-radius, value: 8px }
-        - { name: line-height, value: 1.2rem }
+        - { name: line-height, value: 1.5rem }
 legend:
   title: Legend
   position:

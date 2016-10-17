@@ -1,0 +1,14 @@
+---
+title: Buildings
+layout: layer
+category: logistics
+features:
+  - title: World Food Programme (WFP)\nHeadquarters
+    type: building
+    lonlat: [12.40772, 41.82114]
+    description: "The headquarters of WFP.  The GeoNode Summit will be held at WFP on Wednesday and Thursday."
+  - title: Food and Agriculture Organization (FAO)
+    type: building
+    lonlat: [12.48851, 41.88251]
+    description: "The headquarters of FAO.  The GeoNode Summit will be held at FAO on Monday, Tuesday, and Friday."
+---
