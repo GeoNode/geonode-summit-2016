@@ -13,6 +13,7 @@ view:
   maxZoom: 18
   minZoom: 0
   zoom: 11
+  controls: []
 controls:
   attribution: false
   legend: false
@@ -210,27 +211,27 @@ overlays:
   - id: attribution
     type: text
     position:
-      bottom: 8px
+      bottom: 68px
       right: 8px
     text:
       content: "&copy; [OpenStreetMap](http://www.openstreetmap.org/copyright)"
-      font: { style: normal, family: Verdana, size: 2rem }
+      font: { style: normal, family: Verdana, size: 1.2rem }
     css:
       properties:
         - { name: padding, value: 8px }
         - { name: background, value: "rgba(0, 0, 0, 0.4)" }
         - { name: border, value: "2px solid #0374e6" }
         - { name: border-radius, value: 8px }
-        - { name: line-height, value: 2rem }
+        - { name: line-height, value: 1.2rem }
         - { name: color, value: white }
   - id: powered_by_geodash
     type: text
     position:
-      bottom: 8px
+      bottom: 68px
       left: 8px
     text:
       content: "Powered by GeoDash"
-      font: { style: normal, family: Verdana, size: 2rem }
+      font: { style: normal, family: Verdana, size: 1.2rem }
     link: { url: "http://geodash.io", target: "_blank" }
     css:
       properties:
@@ -238,7 +239,7 @@ overlays:
         - { name: background, value: "rgba(0, 0, 0, 0.4)" }
         - { name: border, value: "2px solid #0374e6" }
         - { name: border-radius, value: 8px }
-        - { name: line-height, value: 2rem }
+        - { name: line-height, value: 1.2rem }
         - { name: color, value: white }
   - id: zoom_in
     type: text
@@ -297,74 +298,6 @@ overlays:
         - { name: border, value: "2px solid #0374e6" }
         - { name: border-radius, value: 8px }
         - { name: line-height, value: 20px }
-  - id: toggle_buildings
-    type: text
-    title: "Toggle Buildings"
-    position: { top: calc(1rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px), left: 8px, bottom: auto, right: auto }
-    text:
-      content: ""
-      font: { family: FontAwesome, size: 2rem }
-    intent: { name: toggleFeatureLayer, properties: [{ name: layer, value: buildings }] }
-    tooltip: { placement: right, content: "Toggle Buildings" }
-    css:
-      properties:
-        - { name: padding, value: 8px }
-        - { name: background, value: "rgba(0,0,0, 0.4)" }
-        - { name: border, value: "2px solid #0374e6" }
-        - { name: border-radius, value: 8px }
-        - { name: line-height, value: 2rem }
-  - id: toggle_train_stations
-    type: text
-    title: "Toggle Train Stations"
-    position: { top: calc(1rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px), left: 8px, bottom: auto, right: auto }
-    text:
-      content: ""
-      font: { family: FontAwesome, size: 2rem }
-    intent: { name: toggleFeatureLayer, properties: [{ name: layer, value: train_stations }] }
-    tooltip: { placement: right, content: "Toggle Train Stations" }
-    css:
-      properties:
-        - { name: padding, value: 8px }
-        - { name: background, value: "rgba(0,0,0, 0.4)" }
-        - { name: border, value: "2px solid #0374e6" }
-        - { name: border-radius, value: 8px }
-        - { name: line-height, value: 2rem }
-  - id: toggle_metro_stations
-    type: text
-    title: "Toggle Metro Stations"
-    position: { top: calc(1rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px), left: 8px, bottom: auto, right: auto }
-    text:
-      content: ""
-      font: { family: FontAwesome, size: 2rem }
-    intent: { name: toggleFeatureLayer, properties: [{ name: layer, value: metro_stations }] }
-    tooltip: { placement: right, content: "Toggle Metro Stations" }
-    css:
-      properties:
-        - { name: padding, value: 8px }
-        - { name: background, value: "rgba(0,0,0, 0.4)" }
-        - { name: border, value: "2px solid #0374e6" }
-        - { name: border-radius, value: 8px }
-        - { name: line-height, value: 2rem }
-  - id: toggle_airports
-    type: text
-    title: "Toggle Airports"
-    position:
-      top: calc(1rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px)
-      left: 8px
-      bottom: auto
-      right: auto
-    text:
-      content: ""
-      font: { family: FontAwesome, size: 2rem }
-    intent: { name: toggleFeatureLayer, properties: [{ name: layer, value: airports }] }
-    tooltip: { placement: right, content: "Toggle Airports" }
-    css:
-      properties:
-        - { name: padding, value: 8px }
-        - { name: background, value: "rgba(0,0,0, 0.4)" }
-        - { name: border, value: "2px solid #0374e6" }
-        - { name: border-radius, value: 8px }
-        - { name: line-height, value: 2rem }
   - id: toggle_fullscreen
     type: text
     title: "Toggle Full Screen"
@@ -438,4 +371,91 @@ legend:
       value: 20px
     - name: color
       value: black
+navbars:
+  - id: days
+    placement: bottom
+    intents:
+      - name: stateChanged
+        properties: [{ name: day, value: "{{ tab.value }}" }]
+      - name: zoomToLocation
+        properties:
+          - { name: lat, value: "{{ tab.lat }}" }
+          - { name: lon, value: "{{ tab.lon }}" }
+          - { name: zoom, value: "{{ tab.zoom }}" }
+    switch: "state.day"
+    tabs:
+      - title: Monday
+        value: monday
+        tooltip: { placement: top, content: "Pre-conference Triage" }
+        lat: 41.8825
+        lon: 12.4885
+        zoom: 17
+        projection: "EPSG:4326"
+      - title: Tuesday
+        value: tuesday
+        tooltip: { placement: top, content: "Workshops Day" }
+        lat: 41.8825
+        lon: 12.4885
+        zoom: 17
+        projection: "EPSG:4326"
+      - title: Wednesdsay
+        value: wednesday
+        tooltip: { placement: top, content: "Presentations Day" }
+        lat: 41.82110
+        lon: 12.40770
+        zoom: 17
+        projection: "EPSG:4326"
+      - title: Thursday
+        value: thursday
+        tooltip: { placement: top, content: "Roadmapping Day" }
+        lat: 41.82110
+        lon: 12.40770
+        zoom: 17
+        projection: "EPSG:4326"
+      - title: Friday
+        value: friday
+        tooltip: { placement: top, content: "Prioritization" }
+        lat: 41.82110
+        lon: 12.40770
+        zoom: 17
+        projection: "EPSG:4326"
+  - id: layers
+    placement: top
+    intents:
+      - name: toggleFeatureLayer
+        properties: [{ name: layer, value: "{{ tab.value }}" }]
+    css:
+      properties:
+        - { name: left, value: 25% }
+        - { name: right, value: 25% }
+        - { name: height, value: 20px }
+    tabs:
+      - title: ""
+        value: buildings
+        tooltip: { placement: bottom, content: "Buildings" }
+        css:
+          properties:
+            - { name: font-size, value: 2rem }
+            - { name: font-family, value: FontAwesome }
+      - title: ""
+        value: train_stations
+        tooltip: { placement: bottom, content: "Train Stations" }
+        css:
+          properties:
+            - { name: font-size, value: 2rem }
+            - { name: font-family, value: FontAwesome }
+      - title: ""
+        value: metro_stations
+        tooltip: { placement: bottom, content: "Metro Stations" }
+        css:
+          properties:
+            - { name: font-size, value: 2rem }
+            - { name: font-family, value: FontAwesome }
+      - title: ""
+        value: airports
+        tooltip: { placement: bottom, content: "Airports" }
+        css:
+          properties:
+            - { name: font-size, value: 2rem }
+            - { name: font-family, value: FontAwesome }
 {% endraw %}

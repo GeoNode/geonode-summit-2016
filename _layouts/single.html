@@ -23,9 +23,11 @@ layout: base
               {{ content }}
               {% if page.map %}
               <div style="width:{{ page.map.size.width }};height:{{ page.map.size.height }};">
-                <div id="{{ page.map.id }}">
-                  <div id="{{ page.map.popup.id }}"></div>
-                </div>
+                <iframe
+                  id="{{ page.map.id }}"
+                  src="http://viewer.geodash.io/?main:config={{ site.url }}{{ page.map.dashboard }}"
+                  style="width: 100%; height: 100%;"
+                ></iframe>
               </div>
               {% endif %}
             </div>
