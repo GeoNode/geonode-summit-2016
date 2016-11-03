@@ -2,6 +2,13 @@
 title: Summary
 layout: base
 ---
+<style>
+
+.single-content p {
+  margin-bottom: 0.5em;
+}
+
+</style>
 <body class="left-sidebar">
   {% include nav.html %}
 	<div id="main-wrapper">
@@ -9,7 +16,7 @@ layout: base
 			<div class="row">
 				<div class="8u -2u skel-cell-important">
 					<article class="box post">
-						<div id="summary-text">
+						<div id="summary-text" class="single-content">
               <header style="display: table; width: 100%;">
                 <h2 id="{{ page.id }}" style="display: table-cell;">{{ page.title }}</h2>
                 {% if site.edit == true %}
