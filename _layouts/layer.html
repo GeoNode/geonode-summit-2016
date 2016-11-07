@@ -1,0 +1,19 @@
+---
+---
+{
+  "type": "FeatureCollection",
+  "features": [{% for f in page.features %}
+    {% if f.lonlat %}{
+      "type": "Feature",
+      "properties": {
+        "title": "{{ f.title }}",
+        "type": "{{ f.type }}",
+        "description": "{{ f.description }}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [{{ f.lonlat[0] }}, {{ f.lonlat[1] }}]
+      }
+    }{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}
+  ]
+}

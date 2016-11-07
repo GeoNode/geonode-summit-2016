@@ -1,0 +1,10 @@
+---
+title: Airports
+layout: layer
+category: logistics
+features:
+  - title: Fiumicino Airport (FCO)
+    type: airport
+    lonlat: [12.25235, 41.79340]
+    description: "Rome's main airport.  Fly into here.  Do not fly into Ciampino unless you really know what you are doing."
+---

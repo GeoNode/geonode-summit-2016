@@ -1,0 +1,441 @@
+---
+{% raw %}
+title: GeoNode Summit 2016 Logistics
+view:
+  baselayer: osm
+  featurelayers:
+    - buildings
+    - train_stations
+    - metro_stations
+    - airports
+  latitude: 41.8667
+  longitude: 12.4920
+  maxZoom: 18
+  minZoom: 0
+  zoom: 11
+controls:
+  attribution: false
+  legend: false
+  zoom: false
+renderlayers:
+  - buildings
+  - train_station
+  - metro_station
+  - airports
+  - osm
+baselayers:
+  - id: osm
+    title: OpenStreetMap
+    description: OpenStreetMap Basemap, Standard Style
+    source:
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      name: OpenStreetMap
+      tile:
+        url: https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png
+      type: tiles
+featurelayers:
+  - id: buildings
+    type: GeoJSON
+    title: "Buildings"
+    description: "Key buildings in Rome"
+    geojson:
+      url: "http://summit.geonode.org/logistics/buildings.json"
+    popup:
+      title: "{{ feature.attributes.title }}"
+      css:
+        properties:
+          - { name: max-width, value: 550px }
+          - { name: min-width, value: 220px }
+      panes:
+        - id: "popup_overview"
+          tab:
+            label: "Overview"
+          fields:
+            - { label: "", value: "{{ feature.attributes.description }}" }
+            - type: link
+              value: "OpenStreetMap"
+              url: "https://www.openstreetmap.org/#map=15/{{ feature.geometry.lat | number : 4 }}/{{ feature.geometry.lon | number : 4 }}"
+    carto:
+      styles:
+        - id: default
+          title: default
+          description: "Default style"
+          legend: { type: marker }
+          symbolizers:
+            - id: default
+              title: Default
+              description: "Default symbolizer"
+              type: point
+              static:
+                properties:
+                  fillColor: "rgba(0, 0, 256, 0.5)"
+                  strokeColor: "rgba(256, 256, 256, 0.8)"
+                  strokeWidth: 1
+                  textCode: "f19c"
+                  textFont: "normal 20px FontAwesome"
+                  textAlign:  "center"
+                  textBaseline: "middle"
+                  textColor: "white"
+                  radius: 18
+  - id: train_stations
+    type: GeoJSON
+    title: "Train Stations"
+    description: "Key train stations in Rome"
+    geojson:
+      url: "http://summit.geonode.org/logistics/train-stations.json"
+    popup:
+      title: "{{ feature.attributes.title }}"
+      css:
+        properties:
+          - { name: max-width, value: 550px }
+          - { name: min-width, value: 220px }
+      panes:
+        - id: "popup_overview"
+          tab:
+            label: "Overview"
+          fields:
+            - { label: "", value: "{{ feature.attributes.description }}" }
+            - type: link
+              value: "OpenStreetMap"
+              url: "https://www.openstreetmap.org/#map=15/{{ feature.geometry.lat | number : 4 }}/{{ feature.geometry.lon | number : 4 }}"
+    carto:
+      styles:
+        - id: default
+          title: default
+          description: "Default style"
+          legend: { type: marker }
+          symbolizers:
+            - id: default
+              title: Default
+              description: "Default symbolizer"
+              type: point
+              static:
+                properties:
+                  fillColor: "rgba(0, 0, 256, 0.5)"
+                  strokeColor: "rgba(256, 256, 256, 0.8)"
+                  strokeWidth: 1
+                  textCode: "f238"
+                  textFont: "normal 20px FontAwesome"
+                  textAlign:  "center"
+                  textBaseline: "middle"
+                  textColor: "white"
+                  radius: 18
+  - id: metro_stations
+    type: GeoJSON
+    title: "Metro Stations"
+    description: "Key metro stations in Rome"
+    geojson:
+      url: "http://summit.geonode.org/logistics/metro-stations.json"
+    popup:
+      title: "{{ feature.attributes.title }}"
+      css:
+        properties:
+          - { name: max-width, value: 550px }
+          - { name: min-width, value: 220px }
+      panes:
+        - id: "popup_overview"
+          tab:
+            label: "Overview"
+          fields:
+            - { label: "", value: "{{ feature.attributes.description }}" }
+            - type: link
+              value: "OpenStreetMap"
+              url: "https://www.openstreetmap.org/#map=15/{{ feature.geometry.lat | number : 4 }}/{{ feature.geometry.lon | number : 4 }}"
+    carto:
+      styles:
+        - id: default
+          title: default
+          description: "Default style"
+          legend: { type: marker }
+          symbolizers:
+            - id: default
+              title: Default
+              description: "Default symbolizer"
+              type: point
+              static:
+                properties:
+                  fillColor: "rgba(0, 0, 256, 0.5)"
+                  strokeColor: "rgba(256, 256, 256, 0.8)"
+                  strokeWidth: 1
+                  textCode: "f239"
+                  textFont: "normal 20px FontAwesome"
+                  textAlign:  "center"
+                  textBaseline: "middle"
+                  textColor: "white"
+                  radius: 18
+  - id: airports
+    type: GeoJSON
+    title: "Airports"
+    description: "Key airports in Rome"
+    geojson:
+      url: "http://summit.geonode.org/logistics/airports.json"
+    popup:
+      title: "{{ feature.attributes.title }}"
+      css:
+        properties:
+          - { name: max-width, value: 550px }
+          - { name: min-width, value: 220px }
+      panes:
+        - id: "popup_overview"
+          tab:
+            label: "Overview"
+          fields:
+            - { label: "", value: "{{ feature.attributes.description }}" }
+            - type: link
+              value: "OpenStreetMap"
+              url: "https://www.openstreetmap.org/#map=15/{{ feature.geometry.lat | number : 4 }}/{{ feature.geometry.lon | number : 4 }}"
+    carto:
+      styles:
+        - id: default
+          title: default
+          description: "Default style"
+          legend: { type: marker }
+          symbolizers:
+            - id: default
+              title: Default
+              description: "Default symbolizer"
+              type: point
+              static:
+                properties:
+                  fillColor: "rgba(0, 0, 256, 0.5)"
+                  strokeColor: "rgba(256, 256, 256, 0.8)"
+                  strokeWidth: 1
+                  textCode: "f072"
+                  textFont: "normal 20px FontAwesome"
+                  textAlign:  "center"
+                  textBaseline: "middle"
+                  textColor: "white"
+                  radius: 18
+overlays:
+  - id: attribution
+    type: text
+    position:
+      bottom: 8px
+      right: 8px
+    text:
+      content: "&copy; [OpenStreetMap](http://www.openstreetmap.org/copyright)"
+      font: { style: normal, family: Verdana, size: 2rem }
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0, 0, 0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 2rem }
+        - { name: color, value: white }
+  - id: powered_by_geodash
+    type: text
+    position:
+      bottom: 8px
+      left: 8px
+    text:
+      content: "Powered by GeoDash"
+      font: { style: normal, family: Verdana, size: 2rem }
+    link: { url: "http://geodash.io", target: "_blank" }
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0, 0, 0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 2rem }
+        - { name: color, value: white }
+  - id: zoom_in
+    type: text
+    title: "Zoom In"
+    position: { top: 8px, left: 8px, bottom: auto, right: auto }
+    text:
+      content: ""
+      font:
+        family: FontAwesome
+        size: 2rem
+    intent:
+      name: zoomIn
+    tooltip: { placement: right, content: "Zoom In" }
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0,0,0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: "8px 8px 0px 0px" }
+        - { name: line-height, value: 2rem }
+  - id: zoom_out
+    type: text
+    title: "Zoom Out"
+    position: { top: calc(1rem + 10px + 2rem + 10px), left: 8px, bottom: auto, right: auto }
+    text:
+      content: ""
+      font:
+        family: FontAwesome
+        size: 2rem
+    intent:
+      name: zoomOut
+    tooltip: { placement: right, content: "Zoom Out" }
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0,0,0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: "0px 0px 8px 8px" }
+        - { name: line-height, value: 2rem }
+  - id: reset_extent
+    type: text
+    title: "Reset Extent"
+    position: { top: calc(1rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px), left: 8px, bottom: auto, right: auto }
+    text:
+      content: ""
+      font: { family: FontAwesome, size: 2rem }
+    intent:
+      name: zoomToLayer
+      properties:
+        - { name: layer, value: train_stations }
+    tooltip: { placement: right, content: "Reset Extent" }
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0,0,0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 20px }
+  - id: toggle_buildings
+    type: text
+    title: "Toggle Buildings"
+    position: { top: calc(1rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px), left: 8px, bottom: auto, right: auto }
+    text:
+      content: ""
+      font: { family: FontAwesome, size: 2rem }
+    intent: { name: toggleFeatureLayer, properties: [{ name: layer, value: buildings }] }
+    tooltip: { placement: right, content: "Toggle Buildings" }
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0,0,0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 2rem }
+  - id: toggle_train_stations
+    type: text
+    title: "Toggle Train Stations"
+    position: { top: calc(1rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px), left: 8px, bottom: auto, right: auto }
+    text:
+      content: ""
+      font: { family: FontAwesome, size: 2rem }
+    intent: { name: toggleFeatureLayer, properties: [{ name: layer, value: train_stations }] }
+    tooltip: { placement: right, content: "Toggle Train Stations" }
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0,0,0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 2rem }
+  - id: toggle_metro_stations
+    type: text
+    title: "Toggle Metro Stations"
+    position: { top: calc(1rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px), left: 8px, bottom: auto, right: auto }
+    text:
+      content: ""
+      font: { family: FontAwesome, size: 2rem }
+    intent: { name: toggleFeatureLayer, properties: [{ name: layer, value: metro_stations }] }
+    tooltip: { placement: right, content: "Toggle Metro Stations" }
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0,0,0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 2rem }
+  - id: toggle_airports
+    type: text
+    title: "Toggle Airports"
+    position:
+      top: calc(1rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px)
+      left: 8px
+      bottom: auto
+      right: auto
+    text:
+      content: ""
+      font: { family: FontAwesome, size: 2rem }
+    intent: { name: toggleFeatureLayer, properties: [{ name: layer, value: airports }] }
+    tooltip: { placement: right, content: "Toggle Airports" }
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0,0,0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 2rem }
+  - id: toggle_fullscreen
+    type: text
+    title: "Toggle Full Screen"
+    position: { top: 1rem, left: auto, bottom: auto, right: 1rem }
+    text:
+      content: ""
+      font: { family: FontAwesome, size: 2rem }
+    intent: { name: toggleFullScreen }
+    tooltip: { placement: left, content: "Toggle Full Screen" }
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0,0,0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 2rem }
+  - id: print_map
+    type: text
+    title: "Print Map"
+    position: { top: calc(1rem + 10px + 2rem + 10px + 0.5rem), right: 1rem, bottom: auto, left: auto }
+    text:
+      content: ""
+      font: { family: FontAwesome, size: 2rem }
+    intent:
+      name: printMap
+    tooltip: { placement: left, content: "Print Map" }
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0,0,0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 2rem }
+  - id: submit_issue
+    type: text
+    title: "Submit Issue"
+    position: { top: calc(1rem + 10px + 2rem + 10px + 0.5rem + 10px + 2rem + 10px + 0.5rem), right: 1rem, bottom: auto, left: auto }
+    text:
+      content: ""
+      font: { family: FontAwesome, size: 2rem }
+    link: { url: "http://github.com/geonode/geonode-summit-2016/issues", target: "_blank" }
+    tooltip: { placement: left, content: "Submit an Issue" }
+    css:
+      properties:
+        - { name: padding, value: 8px }
+        - { name: background, value: "rgba(0,0,0, 0.4)" }
+        - { name: border, value: "2px solid #0374e6" }
+        - { name: border-radius, value: 8px }
+        - { name: line-height, value: 2rem }
+legend:
+  title: Legend
+  position:
+    bottom: 80px
+    left: auto
+    right: 8px
+    top: auto
+  width: 360px
+  height: auto
+  grid: ["col-sm-4", "col-sm-8"]
+  css:
+    properties:
+    - name: padding
+      value: 8px
+    - name: background
+      value: '#EEE'
+    - name: border
+      value: '2px solid #0374e6'
+    - name: border-radius
+      value: 8px
+    - name: line-height
+      value: 20px
+    - name: color
+      value: black
+{% endraw %}

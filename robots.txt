@@ -1,2 +1,7 @@
 User-agent: *
-Disallow: /
+Disallow: /_includes/
+Disallow: /_layouts/
+Disallow: /_posts/
+Disallow: /assets/
+Disallow: /_config.yml
+Disallow: /README.md
