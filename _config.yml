@@ -82,7 +82,7 @@ geonode_summit_2016:
   contacts:
     - name: Patrick Dufour
       email: pjdufour.dev@gmail.com
-    - name: WFP Headquarters GIS Unit
+    - name: WFP Emergencies Division GIS Unit
       email: hq.gis@wfp.org
   sponsors:
     - image: /assets/img/logos/geonode_logo_white.png
