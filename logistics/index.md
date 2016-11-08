@@ -22,7 +22,11 @@ Via degli Orti di Trastevere, 3
 http://www.worldhotelriparoma.com/
 ```
 
-For our block, we have a special rate of **€ 99 per night**.  Rate includes American Buffet Breakfast, Vat and Service – city tax 6 Euro per person per day excluded. Unlimited WiFi is also included.  The deadline to book under this block is **November 14, 2016**.  If the reservation is cancelled after **November 14**, then you are charged a cancellation fee equal to **2 nights**.  If you cancel before November 14, there is no cancellation fee.  Please use the following block code when booking: **"GeoNode Summit 2016/DuFour"**.  Be sure to include **"/DuFour"**.  A url link for online registration will be available within 2 days.  In the meantime, if you want to lock in your reservation, you can call or email the following (be sure to reference the provided block code).
+For our block, we have a special rate of **€ 99 per night**.  Rate includes American Buffet Breakfast, Vat and Service – city tax 6 Euro per person per day excluded. Unlimited WiFi is also included.  The deadline to book under this block is **November 14, 2016**.  If the reservation is cancelled after **November 14**, then you are charged a cancellation fee equal to **2 nights**.  If you cancel before November 14, there is no cancellation fee.  Please use the following block code when booking: **"GeoNode Summit 2016/DuFour"**.  Be sure to include **"/DuFour"**.  The easiest way to book is to follow this booking link on **yourreservation.net**.
+
+[https://www.yourreservation.net/tb3/?bf=HA1ROMRI&iataNumber=RMBLK](https://www.yourreservation.net/tb3/?bf=HA1ROMRI&iataNumber=RMBLK).
+
+If you have any issue with the website, you can also call or email the following (be sure to reference the provided block code).
 
 ```
 Tiziana Alberati
