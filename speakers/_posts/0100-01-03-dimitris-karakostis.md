@@ -10,4 +10,4 @@ handles:
     name: dkarakostis
 ---
 
-Web GIS Developer at World Food Programme (WFP)
+Web GIS Developer at World Food Programme (WFP).
