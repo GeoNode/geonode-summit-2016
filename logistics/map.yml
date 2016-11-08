@@ -224,23 +224,6 @@ overlays:
         - { name: border-radius, value: 8px }
         - { name: line-height, value: 1.2rem }
         - { name: color, value: white }
-  - id: powered_by_geodash
-    type: text
-    position:
-      bottom: 68px
-      left: 8px
-    text:
-      content: "Powered by GeoDash"
-      font: { style: normal, family: Verdana, size: 1.2rem }
-    link: { url: "http://geodash.io", target: "_blank" }
-    css:
-      properties:
-        - { name: padding, value: 8px }
-        - { name: background, value: "rgba(0, 0, 0, 0.4)" }
-        - { name: border, value: "2px solid #0374e6" }
-        - { name: border-radius, value: 8px }
-        - { name: line-height, value: 1.2rem }
-        - { name: color, value: white }
   - id: zoom_in
     type: text
     title: "Zoom In"

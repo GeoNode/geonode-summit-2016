@@ -13,29 +13,40 @@ There is no conference fee.  GeoNode Summit 2016 is completely free.  However, w
 
 ### Accomodations
 
-We have a block of **25 rooms** at Starhotels Metropole near the city center of Rome for **€ 135** per night.  The hotel is within walking distance from Roma Termini, the main train station.  The address is:
+We have a block of **25 rooms** at Worldhotel Ripa Roma in Trastevere for **€ 99** per night.  The hotel is within walking distance from **ROMA TRASTEVERE**, a train station connecting to WFP and is on the **#8** and **#3** tram lines.  You can conveniently take the **#8** tram directly into the city center.  The address is:
 
 ```
-Starhotels Metropole
-Via Principe Amedeo 3
-00185 Roma
+Worldhotel Ripa Roma
+Via degli Orti di Trastevere, 3
+00153 Roma
+http://www.worldhotelriparoma.com/
 ```
 
-Please use the following link to book.  For our block, we have a rate of **€ 135 per night**.  Please use the provided link rather than hotels.com, booking.com, etc.  For the first days of the Summit, we'll meet in the lobby before walking to the train station.
+For our block, we have a special rate of **€ 99 per night** with **breakfast and wifi** included.  The deadline to book under this block is **November 14, 2016**.  If the reservation is cancelled after **November 14**, then you are charged a cancellation fee equal to **2 nights**.  If you cancel before November 14, there is no cancellation fee.  Please use the following block code when booking: **"GeoNode Summit 2016/DuFour"**.  Be sure to include **"/DuFour"**.  A url link for online registration will be available within 2 days.  In the meantime, if you want to lock in your reservation, you can call the following (be sure to reference the provided block code).
+
+```
+Tiziana Alberati
+Director of Sales & Marketing
+M +39 342 7098544
+T +39 06 5861849
+talberati@worldhotelriparoma.com
+```
+
+Please use the provided code rather than using hotels.com, booking.com, etc. for the same hotel.  For the first days of the Summit, we'll meet in the lobby before walking to the train station.
 
 If you would like to stay elsewhere, AirBnb is a good option.  However, finding an affordable hotel closer to the city center and with a simpler commute will be difficult.
 
 **By Flying**
 
-If flying into Rome, The easiest way to get to the hotel is to take the **Leonardo Express** train from Fiumicino Airport (FCO) to **ROMA TERMINI** station.  The train takes approximately **32 minutes**.  The hotel is a short 10 minute walk from the train station.  You can buy your train tickets at the station or online.
+If flying into Rome, The easiest way to get to the hotel is to take the **Regional** train from Fiumicino Airport (FCO) to **ROMA TRASTEVERE** station.  Do not take the **LEONARDO EXPRESS** as that train does not stop at **ROMA TRASTEVERE**.  The train takes approximately **26 minutes**.  The hotel is a short 15 minute walk from the train station.  However, you can take the **#3** or **#8** for 3 stops to get within 1 block from the hotel.  You can buy your train tickets at the station or online.
 
 **By Train**
 
-If taking the train into Rome, you can take **Trenitalia** or **Italo** to **ROMA TERMINI** station.  The hotel is a short 10 minute walk from the train station.  If your train does not go to **ROMA TERMINI**, then you can transfer at **ROMA OSTIENSE** and then take a connecting train to **ROMA TERMINI**.  You could also transfer to the metro at **ROMA OSTIENSE** to **PIRAMIDE** metro, which is a few meters away.
+If taking the train into Rome, you can take **Trenitalia** or **Italo** to **ROMA TERMINI** station.  If your train only goes to **ROMA TERMINI**, then you can transfer at **ROMA TERMINI** to a connecting train to **ROMA TRASTEVERE**.  You can also take a taxi, UberBLACK, or take the **H** bus.  Google Maps usually has accurate directions.
 
 ### Conference Locations
 
-GeoNode Summit 2016 is planned to be held in two locations in Rome, Italy: WFP and FAO.  The agenda is still under development.  We will update this page as new information is avialable and the agenda is confirmed.
+GeoNode Summit 2016 is planned to be held in two primary locations in Rome, Italy: WFP and FAO.  The agenda is still under development.  We will update this page as new information is available and the agenda is confirmed.
 
 **WFP**
 
@@ -47,7 +58,7 @@ Via Cesare Giulio Viola, 68
 00148 Roma
 ```
 
-The most convenient and cost-effective way to reach WFP is via train; however, **Taxi** or **Uber Black** are both options.  **UberX** is not available in Rome.  In the morning, trains run every **15 minutes**.  Take the train to **MURATELLA** station.  If you are catching the train at **ROMA TRASTEVERE** station, the train should arrive on Platform 5 ("Binario 5" in Italian).  If you are catching the train at **ROMA OSTIENSE**, the train should arrive at platform 12.  Once you get off the train at **MURATELLA**, then exit toward the business park.  Walk to the right along the street parallel to the train tracks.  You should see a pathway to WFP (with a sign) that will take you to WFP.
+The most convenient and cost-effective way to reach WFP is via train; however, **Taxi** or **UberBLACK** are both options.  **UberX** is not available in Rome.  In the morning, trains run every **15 minutes**.  Take the train to **MURATELLA** station.  If you are catching the train at **ROMA TRASTEVERE** station, the train should arrive on Platform 5 ("Binario 5" in Italian).  If you are catching the train at **ROMA OSTIENSE**, the train should arrive at platform 12.  Once you get off the train at **MURATELLA**, then exit toward the business park.  Walk to the right along the street parallel to the train tracks.  You should see a pathway to WFP (with a sign) that will take you to WFP.
 
 
 **FAO**
@@ -58,7 +69,7 @@ You'll find the locations in the map below.
 
 ### Entrance, Security, etc.
 
-Normal security procedures will be followed at the World Food Programme (WFP) Headquarters and Food and Agriculture Organization (FAO) Headquarters.  If you do not RSVP by **November 21, 2016**, we cannot guarantee entrance into the conference sites.  We will contact RSVP'd attendees and will provide instructions on how they should send a scanned copy of their passport to gain entrance.  When on site at WFP and FAO, your visitor pass must be visible at all times.
+Normal security procedures will be followed at the World Food Programme (WFP) Headquarters and Food and Agriculture Organization (FAO) Headquarters.  If you do not register by **November 13, 2016**, we cannot guarantee entrance into the conference sites.  We will contact registered attendees and provide instructions on how to send a scanned copy of their passport to gain entrance.  When on site at WFP and FAO, your visitor pass must be visible at all times.
 
 ### Other Notes
 
