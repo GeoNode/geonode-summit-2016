@@ -80,8 +80,6 @@ geonode_summit_2016:
     image: "/assets/img/lightning-earth.png"
     description: TBD
   contacts:
-    - name: Patrick Dufour
-      email: pjdufour.dev@gmail.com
     - name: WFP Emergencies Division GIS Unit
       email: hq.gis@wfp.org
   sponsors:
