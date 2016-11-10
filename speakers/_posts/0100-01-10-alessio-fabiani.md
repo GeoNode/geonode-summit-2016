@@ -3,7 +3,13 @@ layout: single
 category: speakers
 name: "Alessio Fabiani"
 organization: "GeoSolutions S.A.S."
-handles: []
+handles:
+  - type: linkedin
+    name: alessio-fabiani-63a76014
+  - type: twitter
+    name: alfa7691
+  - type: github
+    name: afabiani
 ---
 
 Eng. Alessio Fabiani is a Software Engineer, co-founder of GeoSolutions S.A.S., with more than 10 years experience in C++, Java and Python development, currently working as Software Engineer, Technical Lead and Team Leader at GeoSolutions.
