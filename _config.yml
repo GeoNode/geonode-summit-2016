@@ -92,13 +92,13 @@ geonode_summit_2016:
   schedule:
     - id: monday
       title: Monday, November 28
-      location: Food and Agriculture Organization (FAO)
+      location: World Food Programme (WFP)
       theme: Pre-Conference Triage
       collapsed: "true"
       color: "gray"
     - id: tuesday
       title: Tuesday, November 29
-      location: Food and Agriculture Organization (FAO)
+      location: World Food Programme (WFP)
       theme: Workshops Day
       color: "default"
     - id: wednesday
@@ -113,7 +113,7 @@ geonode_summit_2016:
       color: "default"
     - id: friday
       title: Friday, December 2
-      location: Food and Agriculture Organization (FAO)
+      location: World Food Programme (WFP)
       theme: Prioritization
       collapsed: "true"
       color: "gray"
