@@ -6,5 +6,5 @@ features:
   - title: Circo Massimo Metro Station
     type: metro_station
     lonlat: [12.48819, 41.8835]
-    description: "The closest metro station to FAO."
+    description: ""
 ---
