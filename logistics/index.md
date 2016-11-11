@@ -46,9 +46,9 @@ If flying into Rome, The easiest way to get to the hotel is to take the **Region
 
 If taking the train into Rome, you can take **Trenitalia** or **Italo** to **ROMA TERMINI** station.  If your train only goes to **ROMA TERMINI**, then you can transfer at **ROMA TERMINI** to a connecting train to **ROMA TRASTEVERE**.  You can also take a taxi, UberBLACK, or take the **H** bus.  Google Maps usually has accurate directions.
 
-### Conference Locations
+### Conference Location
 
-GeoNode Summit 2016 is planned to be held in two primary locations in Rome, Italy: WFP and FAO.  The agenda is still under development.  We will update this page as new information is available and the agenda is confirmed.
+GeoNode Summit 2016 is planned to be held in the Headquarters of WFP, Rome, Italy.  The agenda is still under development.  We will update this page as new information is available and the agenda is confirmed.
 
 **WFP**
 
@@ -62,16 +62,11 @@ Via Cesare Giulio Viola, 68
 
 The most convenient and cost-effective way to reach WFP is via train; however, **Taxi** or **UberBLACK** are both options.  **UberX** is not available in Rome.  In the morning, trains run every **15 minutes**.  Take the train to **MURATELLA** station.  If you are catching the train at **ROMA TRASTEVERE** station, the train should arrive on Platform 5 ("Binario 5" in Italian).  If you are catching the train at **ROMA OSTIENSE**, the train should arrive at platform 12.  Once you get off the train at **MURATELLA**, then exit toward the business park.  Walk to the right along the street parallel to the train tracks.  You should see a pathway to WFP (with a sign) that will take you to WFP.
 
-
-**FAO**
-
-The Food and Agriculture Organization (FAO) headquarters is located very close to the city center and right next to the **Circo Massimo** metro station and a tram station.  Circo Massimo is "Circus Maximus" in Italian.  It is accessible from the main streets.  You can easily take the metro in the morning to **Circo Massimo**, but it may be busy.  You can also catch a tram around the Colosseum (Colosseo in Italian).
-
 You'll find the locations in the map below.
 
 ### Entrance, Security, etc.
 
-Normal security procedures will be followed at the World Food Programme (WFP) Headquarters and Food and Agriculture Organization (FAO) Headquarters.  If you do not register by **November 13, 2016**, we cannot guarantee entrance into the conference sites.  We will contact registered attendees and provide instructions on how to send a scanned copy of their passport to gain entrance.  When on site at WFP and FAO, your visitor pass must be visible at all times.
+Normal security procedures will be followed at the World Food Programme (WFP) Headquarters.  If you do not register by **November 13, 2016**, we cannot guarantee entrance into the conference sites.  We will contact registered attendees and provide instructions on how to send a scanned copy of their passport to gain entrance.  When on site at WFP, your visitor pass must be visible at all times.
 
 ### Other Notes
 
