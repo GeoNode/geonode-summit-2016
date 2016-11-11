@@ -9,7 +9,7 @@ map:
 
 ### Conference Fee
 
-There is no conference fee.  GeoNode Summit 2016 is completely free.  However, we are looking for sponsors for secondary items, such as coffee, after hours events, etc.
+There is no conference fee.  GeoNode Summit 2016 is completely free.  However, we are looking for sponsors for secondary items, such as after hours events, etc.
 
 ### Accomodations
 
