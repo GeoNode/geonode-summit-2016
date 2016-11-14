@@ -7,8 +7,8 @@ features:
     type: building
     lonlat: [12.40772, 41.82114]
     description: "The headquarters of WFP.  The GeoNode Summit will be held at WFP on Wednesday and Thursday."
-    - title: Holiday Inn Rome - Eur Parco Dei Medici
-      type: building
-      lonlat: [12.412079, 41.822929]
-      description: "Holiday Inn Rome. The Presentations Day of the GeoNode Summit will be held at Holiday Inn."
+  - title: Holiday Inn Rome - Eur Parco Dei Medici
+    type: building
+    lonlat: [12.412079, 41.822929]
+    description: "Holiday Inn Rome. The Presentations Day of the GeoNode Summit will be held at Holiday Inn."
 ---

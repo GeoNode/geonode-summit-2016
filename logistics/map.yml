@@ -370,22 +370,22 @@ navbars:
       - title: Monday
         value: monday
         tooltip: { placement: top, content: "Pre-conference Triage" }
-        lat: 41.8825
-        lon: 12.4885
+        lat: 41.82110
+        lon: 12.40770
         zoom: 17
         projection: "EPSG:4326"
       - title: Tuesday
         value: tuesday
         tooltip: { placement: top, content: "Workshops Day" }
-        lat: 41.8825
-        lon: 12.4885
+        lat: 41.82110
+        lon: 12.40770
         zoom: 17
         projection: "EPSG:4326"
       - title: Wednesdsay
         value: wednesday
         tooltip: { placement: top, content: "Presentations Day" }
-        lat: 41.82110
-        lon: 12.40770
+        lat: 41.822929
+        lon: 12.412079
         zoom: 17
         projection: "EPSG:4326"
       - title: Thursday
