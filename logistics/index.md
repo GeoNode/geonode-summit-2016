@@ -48,7 +48,7 @@ If taking the train into Rome, you can take **Trenitalia** or **Italo** to **ROM
 
 ### Conference Location
 
-GeoNode Summit 2016 is planned to be held in the Headquarters of WFP, Rome, Italy.  The agenda is still under development.  We will update this page as new information is available and the agenda is confirmed.
+GeoNode Summit 2016 is planned to be held in the Headquarters of WFP in Rome and the Holiday Inn Rome. The agenda is still under development.  We will update this page as new information is available and the agenda is confirmed.
 
 **WFP**
 
@@ -60,9 +60,19 @@ Via Cesare Giulio Viola, 68
 00148 Roma
 ```
 
-The most convenient and cost-effective way to reach WFP is via train; however, **Taxi** or **UberBLACK** are both options.  **UberX** is not available in Rome.  In the morning, trains run every **15 minutes**.  Take the train to **MURATELLA** station.  If you are catching the train at **ROMA TRASTEVERE** station, the train should arrive on Platform 5 ("Binario 5" in Italian).  If you are catching the train at **ROMA OSTIENSE**, the train should arrive at platform 12.  Once you get off the train at **MURATELLA**, then exit toward the business park.  Walk to the right along the street parallel to the train tracks.  You should see a pathway to WFP (with a sign) that will take you to WFP.
+**Holiday Inn Rome**
 
-You'll find the locations in the map below.
+Holiday Inn Rome is half-way from the city center to Fiumicino airport (FCO).  The address is:
+
+```
+Holiday Inn Rome - Eur Parco Dei Medici
+Viale Castello della Magliana, 65
+00148 Roma
+```
+
+The most convenient and cost-effective way to reach WFP and Holiday Inn is via train; however, **Taxi** or **UberBLACK** are both options.  **UberX** is not available in Rome.  In the morning, trains run every **15 minutes**.  Take the train to **MURATELLA** station.  If you are catching the train at **ROMA TRASTEVERE** station, the train should arrive on Platform 5 ("Binario 5" in Italian).  If you are catching the train at **ROMA OSTIENSE**, the train should arrive at platform 12.  Once you get off the train at **MURATELLA**, then exit toward the business park.  Walk to the right along the street parallel to the train tracks.  You should see a pathway to WFP (with a sign) that will take you to WFP.
+
+You'll find all the locations in the map below.
 
 ### Entrance, Security, etc.
 
