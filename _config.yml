@@ -102,7 +102,7 @@ geonode_summit_2016:
       color: "default"
     - id: wednesday
       title: Wednesday, November 30
-      location: World Food Programme (WFP)
+      location: Holiday Inn Rome - Eur Parco Dei Medici
       theme: Presentations Day
       color: "default"
     - id: thursday
