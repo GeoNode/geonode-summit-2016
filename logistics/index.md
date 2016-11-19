@@ -11,6 +11,10 @@ map:
 
 There is no conference fee.  GeoNode Summit 2016 is completely free.  However, we are looking for sponsors for secondary items, such as after hours events, etc.
 
+### Dress Code
+
+Dress code is **business casual** as conference location is a work site.  For example, jeans, khaki, skirts, etc. are okay.  No flip flops, etc.  Use your best judgement.
+
 ### Accomodations
 
 We have a block of **25 rooms** at Worldhotel Ripa Roma in Trastevere for **€ 99** per night.  The hotel is within walking distance from **ROMA TRASTEVERE**, a train station connecting to WFP and is on the **#8** and **#3** tram lines.  You can conveniently take the **#8** tram directly into the city center.  The address is:
@@ -40,7 +44,7 @@ Book directly with the hotel, using the **room block name/booking code**, rather
 
 **By Flying**
 
-If flying into Rome, The easiest way to get to the hotel is to take the **Regional** train from Fiumicino Airport (FCO) to **ROMA TRASTEVERE** station.  Do not take the **LEONARDO EXPRESS** as that train does not stop at **ROMA TRASTEVERE**.  The train takes approximately **26 minutes**.  The hotel is a short 15 minute walk from the train station.  However, you can take the **#3** or **#8** for 3 stops to get within 1 block from the hotel.  You can buy your train tickets at the station or online.
+If flying into Rome, The easiest way to get to the hotel is to take the **Regional** train from Fiumicino Airport (FCO) to **ROMA TRASTEVERE** station.  Do not take the **LEONARDO EXPRESS** as that train does not stop at **ROMA TRASTEVERE**.  The train ride takes approximately **26 minutes**.  The hotel is a short 15 minute walk from the train station.  However, you can take the **#3** or **#8** tram for 3 stops to get within 1 block from the hotel.  You can buy your train tickets at the station or online.
 
 **By Train**
 
@@ -76,7 +80,7 @@ You'll find all the locations in the map below.
 
 ### Entrance, Security, etc.
 
-Normal security procedures will be followed at the World Food Programme (WFP) Headquarters.  If you do not register by **November 13, 2016**, we cannot guarantee entrance into the conference sites.  We will contact registered attendees and provide instructions on how to send a scanned copy of their passport to gain entrance.  When on site at WFP, your visitor pass must be visible at all times.
+Normal security procedures will be followed at the World Food Programme (WFP) Headquarters.  If you do not register by **November 13, 2016**, we cannot guarantee entrance into the conference sites.  We will contact registered attendees and provide instructions on how to submit the necessary information to gain entrance.  When on site at WFP, your visitor pass must be visible at all times.
 
 ### Other Notes
 
