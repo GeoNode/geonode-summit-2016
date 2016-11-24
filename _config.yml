@@ -91,7 +91,7 @@ geonode_summit_2016:
   schedule:
     - id: monday
       title: Monday, November 28
-      location: World Food Programme (WFP)
+      location: World Food Programme (WFP) - 7th Floor Rooftop
       theme: Pre-Conference Triage
       collapsed: "true"
       color: "gray"
@@ -102,17 +102,17 @@ geonode_summit_2016:
       color: "default"
     - id: wednesday
       title: Wednesday, November 30
-      location: Holiday Inn Rome - Eur Parco Dei Medici
+      location: Holiday Inn Rome - Eur Parco Dei Medici - Diana Room
       theme: Presentations Day
       color: "default"
     - id: thursday
       title: Thursday, December 1
-      location: World Food Programme (WFP)
+      location: World Food Programme (WFP) - Delegates Lounge (Ground Floor)
       theme: Roadmapping Day
       color: "default"
     - id: friday
       title: Friday, December 2
-      location: World Food Programme (WFP)
+      location: World Food Programme (WFP) - Delegates Lounge (Ground Floor)
       theme: Prioritization
       collapsed: "true"
       color: "gray"
