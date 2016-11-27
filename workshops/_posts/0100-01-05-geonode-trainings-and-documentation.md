@@ -1,13 +1,13 @@
 ---
 layout: single
 category: workshops
-title: "Capacity Building & Training"
+title: "GeoNode Trainings & Documentation"
 keywords:
-  - capacity building
+  - documentation
   - training
-#image:
 ---
-Capacity building & training on open source GIS
+
+GeoNode Trainings & Documentation
 
 This workshop is an opportunity for organizations to present their training material and capacity building initiatives on GeoNode and other open source projects.
 

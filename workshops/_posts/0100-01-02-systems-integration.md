@@ -7,6 +7,5 @@ keywords:
   - OGC
   - HDX
   - CKAN
-#image: 
 ---
 Workshop on Systems Integration: OGC Services, HDX, etc.
