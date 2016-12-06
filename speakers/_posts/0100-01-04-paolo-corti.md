@@ -9,6 +9,7 @@ handles:
   - type: github
     name: capooti
 ---
+- [Presentation: Harvard Worldmap](https://drive.google.com/open?id=0B14wCm_Pc_4GSGlwNlVNaFp1N0E)
 
 Paolo Corti is currently working as a Geospatial Engineering Fellow at the Center for Geographic Analysis at Harvard University in the context of the WorldMap project, based on GeoNode. He is an environmental engineer who has been working as a geospatial analyst and developer for the EU Joint Research Center, the UN World Food Program and the Italian Government.
 
